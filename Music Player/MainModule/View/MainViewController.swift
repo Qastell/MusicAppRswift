@@ -1,0 +1,138 @@
+//
+//  FirstViewController.swift
+//  Music Player
+//
+//  Created by Кирилл Романенко on 23/05/2020.
+//  Copyright © 2020 Кирилл. All rights reserved.
+//
+
+import UIKit
+import AVFoundation
+
+class MainViewController: RoutableViewController<MainPresenting> {
+    
+    private enum Buttons {
+        static let forward = "goForward"
+        static let randomize = "randomSong"
+        static let song = "currentSong"
+    }
+    
+    @IBOutlet weak var myTableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .black
+        
+        startSetup()
+        setupDelegates()
+        setItems ()
+        
+        myTableView.separatorInset.right = 15
+        myTableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.identifier)
+    }
+    
+    //MARK: - private
+    
+    private func setupDelegates() {
+        myTableView.delegate = self
+        myTableView.dataSource = self
+        myTableView.dragInteractionEnabled = true
+        myTableView.dragDelegate = self
+        myTableView.dropDelegate = self
+    }
+    
+    private func startSetup() {
+        presenter.startSetup()
+        presenter.mainViewDidStart()
+    }
+    
+    //MARK: - selectors
+    
+    @objc func mixTracklist(sender: UIButton) {
+        presenter.mixTracklist()
+        presenter.showDetailPlayerView(from: self)
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        presenter.didMoveRow(moveRowAt: sourceIndexPath, to: destinationIndexPath)
+    }
+    
+}
+
+//MARK: - UITableViewDelegate, UITableViewDataSource
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        presenter.userPlaylist.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier, for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
+        
+        cell.imageIsImage = true
+        cell.setSong(presenter.userPlaylist[indexPath.row])
+        cell.playlist = presenter.userPlaylist
+        cell.presenter = presenter
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        65
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.presentDetailPlayerView(from: self, indexPath: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+//MARK: - UITableViewDragDelegate, UITableViewDropDelegate
+
+extension MainViewController: UITableViewDragDelegate {
+    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        return [UIDragItem(itemProvider: NSItemProvider())]
+    }
+}
+
+extension MainViewController: UITableViewDropDelegate {
+    func tableView(_ tableView: UITableView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UITableViewDropProposal {
+        
+        if session.localDragSession != nil { // Drag originated from the same app.
+            return UITableViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
+        }
+        
+        return UITableViewDropProposal(operation: .cancel, intent: .unspecified)
+    }
+    
+    func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator) {
+    }
+}
+
+//MARK: - Objects
+
+extension MainViewController {
+    
+    private func setItems () {
+        guard let navigationController = navigationController else {return}
+        
+        let titleView = UILabel()
+        titleView.text = "Your Tracks"
+        titleView.textColor = #colorLiteral(red: 0.9568627451, green: 0.3411764706, blue: 0.4196078431, alpha: 1)
+        titleView.textAlignment = .center
+        titleView.font = UIFont.systemFont(ofSize: 30)
+        titleView.frame = CGRect(x: (navigationController.navigationBar.bounds.width/2)-100, y: 40, width: (navigationController.navigationBar.frame.width)/2, height: 20)
+        navigationController.navigationBar.insertSubview(titleView, at: 1)
+        
+        let standart = CGRect(x: (navigationController.navigationBar.bounds.width/2)-125, y: titleView.frame.minY-3, width: navigationController.navigationBar.frame.height/3, height: navigationController.navigationBar.frame.height/3)
+        
+        let frameRandomButton = CGRect(x: (navigationController.navigationBar.bounds.width/2)-185, y: standart.origin.y, width: standart.height*1.2, height: standart.height)
+        _ = NavigationBarButton(imageName: Buttons.randomize,
+                      navigationController: navigationController,
+                      frame: frameRandomButton,
+                      target: self,
+                      action: #selector(mixTracklist))
+    }
+}

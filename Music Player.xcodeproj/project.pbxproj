@@ -7,15 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F161C1A24DFEF51000291F2 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F161C1924DFEF51000291F2 /* SongCell.swift */; };
+		3F27FBC72482272D000B0978 /* DetailPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27FBC62482272D000B0978 /* DetailPlayerViewController.swift */; };
+		3F29139B248A2AA900977368 /* Oliver Tree - Hurt.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F29139A248A2AA900977368 /* Oliver Tree - Hurt.mp3 */; };
+		3F29139D248A2AC200977368 /* 21 Savage - Banc Account.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F29139C248A2AC200977368 /* 21 Savage - Banc Account.mp3 */; };
+		3F29139F248A2AD600977368 /* Travis Scott - HIGHEST IN THE ROOM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F29139E248A2AD600977368 /* Travis Scott - HIGHEST IN THE ROOM.mp3 */; };
+		3F2913A1248A2AE900977368 /* The Weeknd - The Hills.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F2913A0248A2AE900977368 /* The Weeknd - The Hills.mp3 */; };
+		3F2913A3248A2B1700977368 /* Lil Nas X - Old Town Road.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F2913A2248A2B1700977368 /* Lil Nas X - Old Town Road.mp3 */; };
+		3F2913A5248A314500977368 /* Travis Scott - CAROUSEL ft Frank Ocean.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F2913A4248A314500977368 /* Travis Scott - CAROUSEL ft Frank Ocean.mp3 */; };
+		3F2913A7248A315200977368 /* Travis Scott - SKELETONS ft The Weeknd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F2913A6248A315200977368 /* Travis Scott - SKELETONS ft The Weeknd.mp3 */; };
+		3F2913A9248A315900977368 /* Travis Scott - YOSEMITE ft Gunna & NAV.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F2913A8248A315900977368 /* Travis Scott - YOSEMITE ft Gunna & NAV.mp3 */; };
+		3F2913AB248A316000977368 /* Travis Scott - Stargazing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F2913AA248A316000977368 /* Travis Scott - Stargazing.mp3 */; };
+		3F2913AD248A316900977368 /* Travis Scott - STOP TRYING TO BE GOD ft James Blake & Kid Cudi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F2913AC248A316900977368 /* Travis Scott - STOP TRYING TO BE GOD ft James Blake & Kid Cudi.mp3 */; };
+		3F2913AF248A317000977368 /* Travis Scott - BUTTERFLY EFFECT.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F2913AE248A317000977368 /* Travis Scott - BUTTERFLY EFFECT.mp3 */; };
+		3F2913B1248A3E4A00977368 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2913B0248A3E4A00977368 /* AlbumDetailViewController.swift */; };
+		3F2913B3248A4E0E00977368 /* AlbumDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2913B2248A4E0E00977368 /* AlbumDetailViewCell.swift */; };
+		3F2AE91A24C084CF00B9CAF5 /* BarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AE91924C084CF00B9CAF5 /* BarButton.swift */; };
+		3F397FA424829EEF00CE18F5 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F397FA324829EEF00CE18F5 /* AudioService.swift */; };
+		3F41A2D724DAC07600251A5D /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F41A2D624DAC07600251A5D /* NotificationService.swift */; };
+		3F4451F3247EB1AD00DDF99F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4451F2247EB1AD00DDF99F /* Assets.xcassets */; };
+		3F4E3EF424D036FA002AAD23 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E3EF324D036FA002AAD23 /* MainTabBarController.swift */; };
+		3F4E3EF624D03E29002AAD23 /* AddTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4E3EF524D03E29002AAD23 /* AddTabBarPresenter.swift */; };
 		3F60381B24792D4900E703E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60381A24792D4900E703E0 /* AppDelegate.swift */; };
-		3F60381D24792D4900E703E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60381C24792D4900E703E0 /* SceneDelegate.swift */; };
-		3F60381F24792D4900E703E0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60381E24792D4900E703E0 /* FirstViewController.swift */; };
-		3F60382124792D4900E703E0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60382024792D4900E703E0 /* SecondViewController.swift */; };
+		3F60381F24792D4900E703E0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60381E24792D4900E703E0 /* MainViewController.swift */; };
+		3F60382124792D4900E703E0 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60382024792D4900E703E0 /* AlbumViewController.swift */; };
 		3F60382424792D4900E703E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F60382224792D4900E703E0 /* Main.storyboard */; };
-		3F60382624792D4C00E703E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F60382524792D4C00E703E0 /* Assets.xcassets */; };
 		3F60382924792D4C00E703E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F60382724792D4C00E703E0 /* LaunchScreen.storyboard */; };
 		3F60383424792D4C00E703E0 /* Music_PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60383324792D4C00E703E0 /* Music_PlayerTests.swift */; };
 		3F60383F24792D4C00E703E0 /* Music_PlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60383E24792D4C00E703E0 /* Music_PlayerUITests.swift */; };
+		3F60384E24792DA000E703E0 /* Machine Gun Kelly - I think I'm ok.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F60384D24792DA000E703E0 /* Machine Gun Kelly - I think I'm ok.mp3 */; };
+		3F60385024792DB400E703E0 /* Travis Scott - The Scotts.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F60384F24792DB400E703E0 /* Travis Scott - The Scotts.mp3 */; };
+		3F60385224792DC000E703E0 /* Travis Scott - SICKO MODE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F60385124792DC000E703E0 /* Travis Scott - SICKO MODE.mp3 */; };
+		3F60385424792DC700E703E0 /* Don Toliver - No Idea.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F60385324792DC700E703E0 /* Don Toliver - No Idea.mp3 */; };
+		3F60385624792DD100E703E0 /* Lil Uzi Vert - Futsal Shuffle 2020.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F60385524792DD100E703E0 /* Lil Uzi Vert - Futsal Shuffle 2020.mp3 */; };
+		3F60385824792DDD00E703E0 /* Arizona Zervas & Swae Lee - Roxanne.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F60385724792DDD00E703E0 /* Arizona Zervas & Swae Lee - Roxanne.mp3 */; };
+		3F60385A24792DE300E703E0 /* The Weeknd - Call Out My Name.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F60385924792DE300E703E0 /* The Weeknd - Call Out My Name.mp3 */; };
+		3F60385C24792DE900E703E0 /* Roddy Ricch - The Box.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F60385B24792DE900E703E0 /* Roddy Ricch - The Box.mp3 */; };
+		3F6038622479446400E703E0 /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6038612479446400E703E0 /* SongService.swift */; };
+		3F6038642479479F00E703E0 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6038632479479F00E703E0 /* MainTableViewCell.swift */; };
+		3F64DC2524C72570009768E3 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2424C72570009768E3 /* MainPresenter.swift */; };
+		3F64DC2824C7260D009768E3 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2724C7260D009768E3 /* BasePresenter.swift */; };
+		3F64DC2B24C7263C009768E3 /* RoutableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2A24C7263C009768E3 /* RoutableViewController.swift */; };
+		3F64DC2D24C72663009768E3 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2C24C72663009768E3 /* ServiceFactory.swift */; };
+		3F64DC2F24C72779009768E3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2E24C72779009768E3 /* Router.swift */; };
+		3FC9F4FC247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FC9F4FB247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 */; };
+		3FC9F4FE247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FC9F4FD247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 */; };
+		3FC9F500247ACBB40079B4EC /* AlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9F4FF247ACBB40079B4EC /* AlbumViewCell.swift */; };
+		3FD69C7E24D19E97002E5DA1 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69C7D24D19E97002E5DA1 /* BaseButton.swift */; };
+		3FD69C8024D19F97002E5DA1 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69C7F24D19F97002E5DA1 /* UIImage+Extension.swift */; };
+		3FD69C8224D19FB5002E5DA1 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69C8124D19FB5002E5DA1 /* UINavigationController+Extension.swift */; };
+		3FD69C8424D19FCC002E5DA1 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69C8324D19FCC002E5DA1 /* UIButton+Extension.swift */; };
+		3FD69C8624D19FED002E5DA1 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69C8524D19FED002E5DA1 /* UIViewController+Extension.swift */; };
+		3FD69C8B24D2D603002E5DA1 /* AddTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD69C8A24D2D603002E5DA1 /* AddTabBarView.swift */; };
+		3FDAA7252494DCE500BC791C /* Eminem - You Gon Learn feat Royce Da 5'9, White Gold.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FDAA7242494DCE400BC791C /* Eminem - You Gon Learn feat Royce Da 5'9, White Gold.mp3 */; };
+		3FDAA7272494E11200BC791C /* Shawn Mendes - In My Blood.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FDAA7262494E11200BC791C /* Shawn Mendes - In My Blood.mp3 */; };
+		3FDAA7292494E11800BC791C /* Camila Cabello - Havana feat. Young Thug.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FDAA7282494E11700BC791C /* Camila Cabello - Havana feat. Young Thug.mp3 */; };
+		3FDAA72B2494E27700BC791C /* Ariana Grande - 7 Rings.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FDAA72A2494E27700BC791C /* Ariana Grande - 7 Rings.mp3 */; };
+		3FDAA72D2494EB0300BC791C /* Kendrick Lamar - DNA..mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FDAA72C2494EB0300BC791C /* Kendrick Lamar - DNA..mp3 */; };
+		3FDAA72F2494EC3000BC791C /* Rae Sremmurd - Black Beatles Ft. Gucci Mane.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FDAA72E2494EC3000BC791C /* Rae Sremmurd - Black Beatles Ft. Gucci Mane.mp3 */; };
+		3FDF613324C7340000D23C1E /* DetailPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF613224C7340000D23C1E /* DetailPlayerPresenter.swift */; };
+		3FDF613624C7343800D23C1E /* AlbumPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF613524C7343800D23C1E /* AlbumPresenter.swift */; };
+		3FDF613924C7347300D23C1E /* AlbumDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDF613824C7347300D23C1E /* AlbumDetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +88,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F161C1924DFEF51000291F2 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		3F27FBC62482272D000B0978 /* DetailPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlayerViewController.swift; sourceTree = "<group>"; };
+		3F29139A248A2AA900977368 /* Oliver Tree - Hurt.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Oliver Tree - Hurt.mp3"; sourceTree = "<group>"; };
+		3F29139C248A2AC200977368 /* 21 Savage - Banc Account.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "21 Savage - Banc Account.mp3"; sourceTree = "<group>"; };
+		3F29139E248A2AD600977368 /* Travis Scott - HIGHEST IN THE ROOM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Travis Scott - HIGHEST IN THE ROOM.mp3"; sourceTree = "<group>"; };
+		3F2913A0248A2AE900977368 /* The Weeknd - The Hills.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Weeknd - The Hills.mp3"; sourceTree = "<group>"; };
+		3F2913A2248A2B1700977368 /* Lil Nas X - Old Town Road.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lil Nas X - Old Town Road.mp3"; sourceTree = "<group>"; };
+		3F2913A4248A314500977368 /* Travis Scott - CAROUSEL ft Frank Ocean.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Travis Scott - CAROUSEL ft Frank Ocean.mp3"; sourceTree = "<group>"; };
+		3F2913A6248A315200977368 /* Travis Scott - SKELETONS ft The Weeknd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Travis Scott - SKELETONS ft The Weeknd.mp3"; sourceTree = "<group>"; };
+		3F2913A8248A315900977368 /* Travis Scott - YOSEMITE ft Gunna & NAV.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Travis Scott - YOSEMITE ft Gunna & NAV.mp3"; sourceTree = "<group>"; };
+		3F2913AA248A316000977368 /* Travis Scott - Stargazing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Travis Scott - Stargazing.mp3"; sourceTree = "<group>"; };
+		3F2913AC248A316900977368 /* Travis Scott - STOP TRYING TO BE GOD ft James Blake & Kid Cudi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Travis Scott - STOP TRYING TO BE GOD ft James Blake & Kid Cudi.mp3"; sourceTree = "<group>"; };
+		3F2913AE248A317000977368 /* Travis Scott - BUTTERFLY EFFECT.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Travis Scott - BUTTERFLY EFFECT.mp3"; sourceTree = "<group>"; };
+		3F2913B0248A3E4A00977368 /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
+		3F2913B2248A4E0E00977368 /* AlbumDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewCell.swift; sourceTree = "<group>"; };
+		3F2AE91924C084CF00B9CAF5 /* BarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButton.swift; sourceTree = "<group>"; };
+		3F397FA324829EEF00CE18F5 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
+		3F41A2D624DAC07600251A5D /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		3F4451F2247EB1AD00DDF99F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F4E3EF324D036FA002AAD23 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		3F4E3EF524D03E29002AAD23 /* AddTabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTabBarPresenter.swift; sourceTree = "<group>"; };
 		3F60381724792D4900E703E0 /* Music Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F60381A24792D4900E703E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F60381C24792D4900E703E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3F60381E24792D4900E703E0 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		3F60382024792D4900E703E0 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		3F60381E24792D4900E703E0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3F60382024792D4900E703E0 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		3F60382324792D4900E703E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3F60382524792D4C00E703E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F60382824792D4C00E703E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F60382A24792D4C00E703E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F60382F24792D4C00E703E0 /* Music PlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music PlayerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +122,39 @@
 		3F60383A24792D4C00E703E0 /* Music PlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music PlayerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F60383E24792D4C00E703E0 /* Music_PlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_PlayerUITests.swift; sourceTree = "<group>"; };
 		3F60384024792D4C00E703E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F60384D24792DA000E703E0 /* Machine Gun Kelly - I think I'm ok.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Machine Gun Kelly - I think I'm ok.mp3"; sourceTree = "<group>"; };
+		3F60384F24792DB400E703E0 /* Travis Scott - The Scotts.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Travis Scott - The Scotts.mp3"; sourceTree = "<group>"; };
+		3F60385124792DC000E703E0 /* Travis Scott - SICKO MODE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Travis Scott - SICKO MODE.mp3"; sourceTree = "<group>"; };
+		3F60385324792DC700E703E0 /* Don Toliver - No Idea.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Don Toliver - No Idea.mp3"; sourceTree = "<group>"; };
+		3F60385524792DD100E703E0 /* Lil Uzi Vert - Futsal Shuffle 2020.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lil Uzi Vert - Futsal Shuffle 2020.mp3"; sourceTree = "<group>"; };
+		3F60385724792DDD00E703E0 /* Arizona Zervas & Swae Lee - Roxanne.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Arizona Zervas & Swae Lee - Roxanne.mp3"; sourceTree = "<group>"; };
+		3F60385924792DE300E703E0 /* The Weeknd - Call Out My Name.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Weeknd - Call Out My Name.mp3"; sourceTree = "<group>"; };
+		3F60385B24792DE900E703E0 /* Roddy Ricch - The Box.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Roddy Ricch - The Box.mp3"; sourceTree = "<group>"; };
+		3F6038612479446400E703E0 /* SongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongService.swift; sourceTree = "<group>"; };
+		3F6038632479479F00E703E0 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		3F64DC2424C72570009768E3 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		3F64DC2724C7260D009768E3 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		3F64DC2A24C7263C009768E3 /* RoutableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableViewController.swift; sourceTree = "<group>"; };
+		3F64DC2C24C72663009768E3 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		3F64DC2E24C72779009768E3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		3FC9F4FB247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ayo & Teo - Rolex.mp3"; sourceTree = "<group>"; };
+		3FC9F4FD247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "XXXTENTACION - SAD!.mp3"; sourceTree = "<group>"; };
+		3FC9F4FF247ACBB40079B4EC /* AlbumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewCell.swift; sourceTree = "<group>"; };
+		3FD69C7D24D19E97002E5DA1 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		3FD69C7F24D19F97002E5DA1 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		3FD69C8124D19FB5002E5DA1 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		3FD69C8324D19FCC002E5DA1 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		3FD69C8524D19FED002E5DA1 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		3FD69C8A24D2D603002E5DA1 /* AddTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTabBarView.swift; sourceTree = "<group>"; };
+		3FDAA7242494DCE400BC791C /* Eminem - You Gon Learn feat Royce Da 5'9, White Gold.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Eminem - You Gon Learn feat Royce Da 5'9, White Gold.mp3"; sourceTree = "<group>"; };
+		3FDAA7262494E11200BC791C /* Shawn Mendes - In My Blood.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Shawn Mendes - In My Blood.mp3"; sourceTree = "<group>"; };
+		3FDAA7282494E11700BC791C /* Camila Cabello - Havana feat. Young Thug.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Camila Cabello - Havana feat. Young Thug.mp3"; sourceTree = "<group>"; };
+		3FDAA72A2494E27700BC791C /* Ariana Grande - 7 Rings.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ariana Grande - 7 Rings.mp3"; sourceTree = "<group>"; };
+		3FDAA72C2494EB0300BC791C /* Kendrick Lamar - DNA..mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Kendrick Lamar - DNA..mp3"; sourceTree = "<group>"; };
+		3FDAA72E2494EC3000BC791C /* Rae Sremmurd - Black Beatles Ft. Gucci Mane.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rae Sremmurd - Black Beatles Ft. Gucci Mane.mp3"; sourceTree = "<group>"; };
+		3FDF613224C7340000D23C1E /* DetailPlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlayerPresenter.swift; sourceTree = "<group>"; };
+		3FDF613524C7343800D23C1E /* AlbumPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPresenter.swift; sourceTree = "<group>"; };
+		3FDF613824C7347300D23C1E /* AlbumDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +182,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F36B66D247FC29A006258B2 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3F60382724792D4C00E703E0 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		3F3E765D24A10AF600B076CB /* AlbumDetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				3F64DC2324C7252B009768E3 /* View */,
+				3FDF613824C7347300D23C1E /* AlbumDetailPresenter.swift */,
+			);
+			path = AlbumDetailModule;
+			sourceTree = "<group>";
+		};
+		3F3E765E24A10B1200B076CB /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				3F64DC2024C72515009768E3 /* View */,
+				3F64DC2424C72570009768E3 /* MainPresenter.swift */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		3F3E765F24A10B5000B076CB /* AlbumModule */ = {
+			isa = PBXGroup;
+			children = (
+				3F64DC2224C72525009768E3 /* View */,
+				3FDF613524C7343800D23C1E /* AlbumPresenter.swift */,
+			);
+			path = AlbumModule;
+			sourceTree = "<group>";
+		};
+		3F4566C6249CE30D0091B9E2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3FD69C7F24D19F97002E5DA1 /* UIImage+Extension.swift */,
+				3FD69C8124D19FB5002E5DA1 /* UINavigationController+Extension.swift */,
+				3FD69C8324D19FCC002E5DA1 /* UIButton+Extension.swift */,
+				3FD69C8524D19FED002E5DA1 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3F4E3EF724D03E78002AAD23 /* TabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				3FD69C8C24D2D837002E5DA1 /* AddTabBarModule */,
+				3F4E3EF324D036FA002AAD23 /* MainTabBarController.swift */,
+			);
+			path = TabBarModule;
+			sourceTree = "<group>";
+		};
 		3F60380E24792D4900E703E0 = {
 			isa = PBXGroup;
 			children = (
 				3F60381924792D4900E703E0 /* Music Player */,
-				3F60383224792D4C00E703E0 /* Music PlayerTests */,
 				3F60383D24792D4C00E703E0 /* Music PlayerUITests */,
 				3F60381824792D4900E703E0 /* Products */,
+				3F60383224792D4C00E703E0 /* Music PlayerTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +260,19 @@
 		3F60381924792D4900E703E0 /* Music Player */ = {
 			isa = PBXGroup;
 			children = (
-				3F60381A24792D4900E703E0 /* AppDelegate.swift */,
-				3F60381C24792D4900E703E0 /* SceneDelegate.swift */,
-				3F60381E24792D4900E703E0 /* FirstViewController.swift */,
-				3F60382024792D4900E703E0 /* SecondViewController.swift */,
-				3F60382224792D4900E703E0 /* Main.storyboard */,
-				3F60382524792D4C00E703E0 /* Assets.xcassets */,
-				3F60382724792D4C00E703E0 /* LaunchScreen.storyboard */,
+				3FA077F024E042BF000E5E4A /* Storyboard+AppDelegate */,
+				3F4E3EF724D03E78002AAD23 /* TabBarModule */,
+				3F3E765E24A10B1200B076CB /* MainModule */,
+				3F60385D2479348700E703E0 /* DetailPlayerModule */,
+				3F3E765F24A10B5000B076CB /* AlbumModule */,
+				3F3E765D24A10AF600B076CB /* AlbumDetailModule */,
+				3F6038602479444D00E703E0 /* Services */,
+				3F4566C6249CE30D0091B9E2 /* Extensions */,
+				3F64DC2924C72611009768E3 /* Base */,
+				3F60384C24792D7F00E703E0 /* Songs */,
+				3F36B66D247FC29A006258B2 /* LaunchScreen */,
 				3F60382A24792D4C00E703E0 /* Info.plist */,
+				3F4451F2247EB1AD00DDF99F /* Assets.xcassets */,
 			);
 			path = "Music Player";
 			sourceTree = "<group>";
@@ -129,6 +293,134 @@
 				3F60384024792D4C00E703E0 /* Info.plist */,
 			);
 			path = "Music PlayerUITests";
+			sourceTree = "<group>";
+		};
+		3F60384C24792D7F00E703E0 /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				3FDAA72E2494EC3000BC791C /* Rae Sremmurd - Black Beatles Ft. Gucci Mane.mp3 */,
+				3FDAA72C2494EB0300BC791C /* Kendrick Lamar - DNA..mp3 */,
+				3FDAA72A2494E27700BC791C /* Ariana Grande - 7 Rings.mp3 */,
+				3FDAA7282494E11700BC791C /* Camila Cabello - Havana feat. Young Thug.mp3 */,
+				3FDAA7262494E11200BC791C /* Shawn Mendes - In My Blood.mp3 */,
+				3FDAA7242494DCE400BC791C /* Eminem - You Gon Learn feat Royce Da 5'9, White Gold.mp3 */,
+				3F29139A248A2AA900977368 /* Oliver Tree - Hurt.mp3 */,
+				3F29139C248A2AC200977368 /* 21 Savage - Banc Account.mp3 */,
+				3F29139E248A2AD600977368 /* Travis Scott - HIGHEST IN THE ROOM.mp3 */,
+				3F2913A2248A2B1700977368 /* Lil Nas X - Old Town Road.mp3 */,
+				3F60384D24792DA000E703E0 /* Machine Gun Kelly - I think I'm ok.mp3 */,
+				3F2913A0248A2AE900977368 /* The Weeknd - The Hills.mp3 */,
+				3F60384F24792DB400E703E0 /* Travis Scott - The Scotts.mp3 */,
+				3F60385124792DC000E703E0 /* Travis Scott - SICKO MODE.mp3 */,
+				3F60385324792DC700E703E0 /* Don Toliver - No Idea.mp3 */,
+				3F60385524792DD100E703E0 /* Lil Uzi Vert - Futsal Shuffle 2020.mp3 */,
+				3F60385724792DDD00E703E0 /* Arizona Zervas & Swae Lee - Roxanne.mp3 */,
+				3F60385924792DE300E703E0 /* The Weeknd - Call Out My Name.mp3 */,
+				3F60385B24792DE900E703E0 /* Roddy Ricch - The Box.mp3 */,
+				3FC9F4FB247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 */,
+				3FC9F4FD247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 */,
+				3F2913AA248A316000977368 /* Travis Scott - Stargazing.mp3 */,
+				3F2913A4248A314500977368 /* Travis Scott - CAROUSEL ft Frank Ocean.mp3 */,
+				3F2913A6248A315200977368 /* Travis Scott - SKELETONS ft The Weeknd.mp3 */,
+				3F2913A8248A315900977368 /* Travis Scott - YOSEMITE ft Gunna & NAV.mp3 */,
+				3F2913AC248A316900977368 /* Travis Scott - STOP TRYING TO BE GOD ft James Blake & Kid Cudi.mp3 */,
+				3F2913AE248A317000977368 /* Travis Scott - BUTTERFLY EFFECT.mp3 */,
+			);
+			path = Songs;
+			sourceTree = "<group>";
+		};
+		3F60385D2479348700E703E0 /* DetailPlayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				3F27FBC62482272D000B0978 /* DetailPlayerViewController.swift */,
+				3FDF613224C7340000D23C1E /* DetailPlayerPresenter.swift */,
+			);
+			path = DetailPlayerModule;
+			sourceTree = "<group>";
+		};
+		3F6038602479444D00E703E0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3F64DC2E24C72779009768E3 /* Router.swift */,
+				3F64DC2C24C72663009768E3 /* ServiceFactory.swift */,
+				3F6038612479446400E703E0 /* SongService.swift */,
+				3F397FA324829EEF00CE18F5 /* AudioService.swift */,
+				3F41A2D624DAC07600251A5D /* NotificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3F64DC2024C72515009768E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F60381E24792D4900E703E0 /* MainViewController.swift */,
+				3F6038632479479F00E703E0 /* MainTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F64DC2224C72525009768E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F60382024792D4900E703E0 /* AlbumViewController.swift */,
+				3FC9F4FF247ACBB40079B4EC /* AlbumViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F64DC2324C7252B009768E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F2913B0248A3E4A00977368 /* AlbumDetailViewController.swift */,
+				3F2913B2248A4E0E00977368 /* AlbumDetailViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F64DC2924C72611009768E3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3FD69C8F24D2FF2E002E5DA1 /* CustomClasses */,
+				3FD69C8924D2D5D3002E5DA1 /* RoutableViewController */,
+				3F64DC2724C7260D009768E3 /* BasePresenter.swift */,
+				3FD69C7D24D19E97002E5DA1 /* BaseButton.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3FA077F024E042BF000E5E4A /* Storyboard+AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3F60382224792D4900E703E0 /* Main.storyboard */,
+				3F60381A24792D4900E703E0 /* AppDelegate.swift */,
+			);
+			path = "Storyboard+AppDelegate";
+			sourceTree = "<group>";
+		};
+		3FD69C8924D2D5D3002E5DA1 /* RoutableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3F64DC2A24C7263C009768E3 /* RoutableViewController.swift */,
+			);
+			path = RoutableViewController;
+			sourceTree = "<group>";
+		};
+		3FD69C8C24D2D837002E5DA1 /* AddTabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				3FD69C8A24D2D603002E5DA1 /* AddTabBarView.swift */,
+				3F4E3EF524D03E29002AAD23 /* AddTabBarPresenter.swift */,
+			);
+			path = AddTabBarModule;
+			sourceTree = "<group>";
+		};
+		3FD69C8F24D2FF2E002E5DA1 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				3F2AE91924C084CF00B9CAF5 /* BarButton.swift */,
+				3F161C1924DFEF51000291F2 /* SongCell.swift */,
+			);
+			path = CustomClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +527,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2913A9248A315900977368 /* Travis Scott - YOSEMITE ft Gunna & NAV.mp3 in Resources */,
+				3F2913A7248A315200977368 /* Travis Scott - SKELETONS ft The Weeknd.mp3 in Resources */,
+				3F2913AF248A317000977368 /* Travis Scott - BUTTERFLY EFFECT.mp3 in Resources */,
+				3FDAA72D2494EB0300BC791C /* Kendrick Lamar - DNA..mp3 in Resources */,
+				3F60385024792DB400E703E0 /* Travis Scott - The Scotts.mp3 in Resources */,
+				3F60385424792DC700E703E0 /* Don Toliver - No Idea.mp3 in Resources */,
+				3F29139F248A2AD600977368 /* Travis Scott - HIGHEST IN THE ROOM.mp3 in Resources */,
 				3F60382924792D4C00E703E0 /* LaunchScreen.storyboard in Resources */,
-				3F60382624792D4C00E703E0 /* Assets.xcassets in Resources */,
+				3F60385824792DDD00E703E0 /* Arizona Zervas & Swae Lee - Roxanne.mp3 in Resources */,
 				3F60382424792D4900E703E0 /* Main.storyboard in Resources */,
+				3F2913A1248A2AE900977368 /* The Weeknd - The Hills.mp3 in Resources */,
+				3F60385224792DC000E703E0 /* Travis Scott - SICKO MODE.mp3 in Resources */,
+				3FDAA7292494E11800BC791C /* Camila Cabello - Havana feat. Young Thug.mp3 in Resources */,
+				3F29139D248A2AC200977368 /* 21 Savage - Banc Account.mp3 in Resources */,
+				3F2913A5248A314500977368 /* Travis Scott - CAROUSEL ft Frank Ocean.mp3 in Resources */,
+				3FDAA7272494E11200BC791C /* Shawn Mendes - In My Blood.mp3 in Resources */,
+				3F2913AB248A316000977368 /* Travis Scott - Stargazing.mp3 in Resources */,
+				3FDAA72F2494EC3000BC791C /* Rae Sremmurd - Black Beatles Ft. Gucci Mane.mp3 in Resources */,
+				3F29139B248A2AA900977368 /* Oliver Tree - Hurt.mp3 in Resources */,
+				3FDAA72B2494E27700BC791C /* Ariana Grande - 7 Rings.mp3 in Resources */,
+				3F4451F3247EB1AD00DDF99F /* Assets.xcassets in Resources */,
+				3F2913AD248A316900977368 /* Travis Scott - STOP TRYING TO BE GOD ft James Blake & Kid Cudi.mp3 in Resources */,
+				3F60385624792DD100E703E0 /* Lil Uzi Vert - Futsal Shuffle 2020.mp3 in Resources */,
+				3FC9F4FE247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 in Resources */,
+				3F60384E24792DA000E703E0 /* Machine Gun Kelly - I think I'm ok.mp3 in Resources */,
+				3F60385A24792DE300E703E0 /* The Weeknd - Call Out My Name.mp3 in Resources */,
+				3FDAA7252494DCE500BC791C /* Eminem - You Gon Learn feat Royce Da 5'9, White Gold.mp3 in Resources */,
+				3FC9F4FC247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 in Resources */,
+				3F2913A3248A2B1700977368 /* Lil Nas X - Old Town Road.mp3 in Resources */,
+				3F60385C24792DE900E703E0 /* Roddy Ricch - The Box.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,10 +581,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F60382124792D4900E703E0 /* SecondViewController.swift in Sources */,
-				3F60381F24792D4900E703E0 /* FirstViewController.swift in Sources */,
+				3FD69C8624D19FED002E5DA1 /* UIViewController+Extension.swift in Sources */,
+				3F6038642479479F00E703E0 /* MainTableViewCell.swift in Sources */,
+				3F64DC2824C7260D009768E3 /* BasePresenter.swift in Sources */,
+				3FD69C8024D19F97002E5DA1 /* UIImage+Extension.swift in Sources */,
+				3FD69C8B24D2D603002E5DA1 /* AddTabBarView.swift in Sources */,
+				3F6038622479446400E703E0 /* SongService.swift in Sources */,
+				3F2AE91A24C084CF00B9CAF5 /* BarButton.swift in Sources */,
+				3F64DC2B24C7263C009768E3 /* RoutableViewController.swift in Sources */,
+				3FD69C8224D19FB5002E5DA1 /* UINavigationController+Extension.swift in Sources */,
+				3F4E3EF624D03E29002AAD23 /* AddTabBarPresenter.swift in Sources */,
+				3F2913B3248A4E0E00977368 /* AlbumDetailViewCell.swift in Sources */,
+				3F60382124792D4900E703E0 /* AlbumViewController.swift in Sources */,
+				3FD69C7E24D19E97002E5DA1 /* BaseButton.swift in Sources */,
+				3FDF613624C7343800D23C1E /* AlbumPresenter.swift in Sources */,
+				3FDF613324C7340000D23C1E /* DetailPlayerPresenter.swift in Sources */,
+				3F64DC2D24C72663009768E3 /* ServiceFactory.swift in Sources */,
+				3F41A2D724DAC07600251A5D /* NotificationService.swift in Sources */,
+				3FD69C8424D19FCC002E5DA1 /* UIButton+Extension.swift in Sources */,
+				3F64DC2524C72570009768E3 /* MainPresenter.swift in Sources */,
+				3F64DC2F24C72779009768E3 /* Router.swift in Sources */,
+				3FDF613924C7347300D23C1E /* AlbumDetailPresenter.swift in Sources */,
+				3F60381F24792D4900E703E0 /* MainViewController.swift in Sources */,
 				3F60381B24792D4900E703E0 /* AppDelegate.swift in Sources */,
-				3F60381D24792D4900E703E0 /* SceneDelegate.swift in Sources */,
+				3F2913B1248A3E4A00977368 /* AlbumDetailViewController.swift in Sources */,
+				3F4E3EF424D036FA002AAD23 /* MainTabBarController.swift in Sources */,
+				3FC9F500247ACBB40079B4EC /* AlbumViewCell.swift in Sources */,
+				3F27FBC72482272D000B0978 /* DetailPlayerViewController.swift in Sources */,
+				3F161C1A24DFEF51000291F2 /* SongCell.swift in Sources */,
+				3F397FA424829EEF00CE18F5 /* AudioService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +783,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM3NBJ97S4;
 				INFOPLIST_FILE = "Music Player/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +801,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM3NBJ97S4;
 				INFOPLIST_FILE = "Music Player/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
