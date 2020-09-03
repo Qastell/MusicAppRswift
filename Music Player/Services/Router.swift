@@ -71,6 +71,7 @@ class Router: RouterProtocol{
     
     private func createAlbumDetailView(for album: Album) -> UIViewController {
         let view = AlbumDetailViewController.instantiateFromStoryboard()
+        view.modalPresentationStyle = .fullScreen
         let presenter = AlbumDetailPresenter(router: self)
         presenter.configure(album: album)
         view.presenter = presenter

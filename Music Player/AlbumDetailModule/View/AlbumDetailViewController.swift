@@ -110,11 +110,11 @@ extension AlbumDetailViewController {
     private func startSetup() {
         guard let album = self.album else { return }
         
-        playButton.setBackgroundImage(UIImage.image(with: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), for: .normal)
+        playButton.setBackgroundImage(UIImage.image(with: #colorLiteral(red: 0.8039215686, green: 0.662745098, blue: 0.6980392157, alpha: 1)), for: .normal)
         playButton.layer.cornerRadius = 10
         playButton.layer.masksToBounds = true
         
-        mixButton.setBackgroundImage(UIImage.image(with: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)), for: .normal)
+        mixButton.setBackgroundImage(UIImage.image(with: #colorLiteral(red: 0.8039215686, green: 0.662745098, blue: 0.6980392157, alpha: 1)), for: .normal)
         mixButton.layer.cornerRadius = 10
         mixButton.layer.masksToBounds = true
         
