@@ -8,13 +8,22 @@
 
 import Foundation
 
+enum StringNotificationKeys {
+    static let playingIsTrue = "isPlaying.true"
+    static let playingIsFalse = "isPlaying.false"
+    static let songIsNil = "isNil.true"
+    static let songIsntNil = "isNil.false"
+    static let songDidChange = "currentSong.didChange"
+    static let favoritePlaylistDidStart = "favoritePlaylist.didStart"
+}
+
 enum NotificationKeys {
-    static let playNotificationKey = Notification.Name("isPlaying.true")
-    static let pauseNotificationKey = Notification.Name("isPlaying.false")
-    static let currentSongIsntNilKey = Notification.Name("isNil.false")
-    static let currentSongIsNilKey = Notification.Name("isNil.true")
-    static let didChangeCurrentSongKey = Notification.Name("currentSong.didChange")
-    static let favoriteToCurrentKey = Notification.Name("currentPlaylist.didFavorite")
+    static let playNotificationKey = Notification.Name(StringNotificationKeys.playingIsTrue)
+    static let pauseNotificationKey = Notification.Name(StringNotificationKeys.playingIsFalse)
+    static let currentSongIsntNilKey = Notification.Name(StringNotificationKeys.songIsntNil)
+    static let currentSongIsNilKey = Notification.Name(StringNotificationKeys.songIsNil)
+    static let didChangeCurrentSongKey = Notification.Name(StringNotificationKeys.songDidChange)
+    static let favoritePlaylistDidStart = Notification.Name(StringNotificationKeys.favoritePlaylistDidStart)
 }
 
 enum NotificationCases {
@@ -31,17 +40,17 @@ final class NotificationService {
     static func setNotification(_ notificationCase: NotificationCases) {
         switch notificationCase {
         case .play:
-            notificationPost("isPlaying.true")
+            notificationPost(StringNotificationKeys.playingIsTrue)
         case .pause:
-            notificationPost("isPlaying.false")
+            notificationPost(StringNotificationKeys.playingIsFalse)
         case .currentSongIsntNil:
-            notificationPost("isNil.false")
+            notificationPost(StringNotificationKeys.songIsntNil)
         case .currentSongIsNil:
-            notificationPost("isNil.true")
+            notificationPost(StringNotificationKeys.songIsNil)
         case .didChangeSong:
-            notificationPost("currentSong.didChange")
+            notificationPost(StringNotificationKeys.songDidChange)
         case .favoriteToCurrent:
-            notificationPost("currentPlaylist.didFavorite")
+            notificationPost(StringNotificationKeys.favoritePlaylistDidStart)
         }
     }
     

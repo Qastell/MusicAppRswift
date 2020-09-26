@@ -106,8 +106,9 @@ class RoutableViewController<T>: UIViewController {
                        animations: {
                         self.addBar.frame.origin.y = setY
                         self.addBar.alpha = setAlpha
+                        self.addBarIsHidden = isHide
         }) { (finished) in
-            self.addBarIsHidden = isHide
+//            self.addBarIsHidden = isHide
         }
     }
 }

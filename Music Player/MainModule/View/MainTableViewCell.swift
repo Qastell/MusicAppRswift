@@ -15,7 +15,7 @@ class MainTableViewCell: SongCell<MainPresenting> {
     var playlist = [Song]()
     
     private let songNotification = NotificationKeys.didChangeCurrentSongKey
-    private let playlistNotification = NotificationKeys.favoriteToCurrentKey
+    private let playlistNotification = NotificationKeys.favoritePlaylistDidStart
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
