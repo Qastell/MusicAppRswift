@@ -82,10 +82,8 @@ extension AlbumDetailViewController: UITableViewDelegate, UITableViewDataSource 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AlbumDetailViewCell.identifier, for: indexPath) as? AlbumDetailViewCell else { return UITableViewCell() }
         
         if let album = self.album {
-            cell.imageIsImage = false
-            cell.setSong(album.tracklist[indexPath.row])
+            cell.setup(styleImage: .title, set: album.tracklist[indexPath.row], presenter: presenter)
             cell.albumID = album.id
-            cell.presenter = presenter
         }
         
         return cell

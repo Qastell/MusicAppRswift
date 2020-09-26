@@ -8,13 +8,15 @@
 
 import UIKit
 
+typealias StyleImageCell = Bool
+
 class SongCell<T>: UITableViewCell {
     
     var nameSong = UILabel()
     var nameArtist = UILabel()
     var duration = UILabel()
     var buttonPlay = UIButton()
-    var imageIsImage = Bool()
+    var imageIs = StyleImageCell()
     
     var presenter: T!
     
@@ -23,7 +25,7 @@ class SongCell<T>: UITableViewCell {
             guard let song = song else { return }
             nameSong.text = song.nameSong
             nameArtist.text = song.nameArtist
-            buttonPlay.set(imageIsImage ? .setImage(from: song) : .setTitle(from: song))
+            buttonPlay.set(imageIs ? .setImage(from: song) : .setTitle(from: song))
             duration.text = getDuration(song)
         }
     }
@@ -37,6 +39,12 @@ class SongCell<T>: UITableViewCell {
         setDurationLabel()
         
         setConstraints ()
+    }
+    
+    func setup(styleImage: StyleImageCell, set song: Song, presenter: T) {
+        imageIs = styleImage
+        setSong(song)
+        self.presenter = presenter
     }
     
     func setSong(_ song: Song) {

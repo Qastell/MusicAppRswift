@@ -50,6 +50,7 @@
 		3F64DC2B24C7263C009768E3 /* RoutableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2A24C7263C009768E3 /* RoutableViewController.swift */; };
 		3F64DC2D24C72663009768E3 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2C24C72663009768E3 /* ServiceFactory.swift */; };
 		3F64DC2F24C72779009768E3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2E24C72779009768E3 /* Router.swift */; };
+		3FB776CF251F897C0061337F /* Bool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB776CE251F897C0061337F /* Bool+Extension.swift */; };
 		3FC9F4FC247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FC9F4FB247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 */; };
 		3FC9F4FE247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FC9F4FD247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 */; };
 		3FC9F500247ACBB40079B4EC /* AlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9F4FF247ACBB40079B4EC /* AlbumViewCell.swift */; };
@@ -137,6 +138,7 @@
 		3F64DC2A24C7263C009768E3 /* RoutableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableViewController.swift; sourceTree = "<group>"; };
 		3F64DC2C24C72663009768E3 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		3F64DC2E24C72779009768E3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		3FB776CE251F897C0061337F /* Bool+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extension.swift"; sourceTree = "<group>"; };
 		3FC9F4FB247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ayo & Teo - Rolex.mp3"; sourceTree = "<group>"; };
 		3FC9F4FD247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "XXXTENTACION - SAD!.mp3"; sourceTree = "<group>"; };
 		3FC9F4FF247ACBB40079B4EC /* AlbumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewCell.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				3FD69C8124D19FB5002E5DA1 /* UINavigationController+Extension.swift */,
 				3FD69C8324D19FCC002E5DA1 /* UIButton+Extension.swift */,
 				3FD69C8524D19FED002E5DA1 /* UIViewController+Extension.swift */,
+				3FB776CE251F897C0061337F /* Bool+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				3F64DC2524C72570009768E3 /* MainPresenter.swift in Sources */,
 				3F64DC2F24C72779009768E3 /* Router.swift in Sources */,
 				3FDF613924C7347300D23C1E /* AlbumDetailPresenter.swift in Sources */,
+				3FB776CF251F897C0061337F /* Bool+Extension.swift in Sources */,
 				3F60381F24792D4900E703E0 /* MainViewController.swift in Sources */,
 				3F60381B24792D4900E703E0 /* AppDelegate.swift in Sources */,
 				3F2913B1248A3E4A00977368 /* AlbumDetailViewController.swift in Sources */,

@@ -19,6 +19,8 @@ class AlbumDetailViewCell: SongCell<AlbumDetailPresenting> {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        
+        
         createObservers()
         
         buttonPlay.addTarget(self, action: #selector(playButtonAction), for: .touchUpInside)

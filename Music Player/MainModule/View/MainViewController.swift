@@ -22,8 +22,6 @@ class MainViewController: RoutableViewController<MainPresenting> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .black
-        
         startSetup()
         setupDelegates()
         setItems ()
@@ -71,10 +69,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier, for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
         
-        cell.imageIsImage = true
-        cell.setSong(presenter.userPlaylist[indexPath.row])
+        cell.setup(styleImage: .image, set: presenter.userPlaylist[indexPath.row], presenter: presenter)
         cell.playlist = presenter.userPlaylist
-        cell.presenter = presenter
         
         return cell
     }
