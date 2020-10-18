@@ -10,6 +10,13 @@ import UIKit
 
 class AdditionalTabBarView: UIView {
     
+    private enum BarButtons {
+        static let play = "playButton"
+        static let pause = "pauseButton"
+        static let forward = "goForward"
+        static let exit = "exit"
+    }
+    
     var presenter = AddTabBarPresenter()
     
     let barPlayButton = UIButton()

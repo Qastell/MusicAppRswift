@@ -40,8 +40,6 @@ class AlbumDetailPresenter: AlbumDetailPresenting {
     var view: AlbumDetailViewProtocol?
     var tableCell: AlbumDetailViewCellProtocol?
     
-    private let didChangeCurrentSongKey = "currentSong.didChange"
-    
     var currentSong: Song? {
         get {
             audioService.currentSong
@@ -66,8 +64,7 @@ class AlbumDetailPresenter: AlbumDetailPresenting {
     }
     
     func checkSongObserver() {
-        let notification = Notification.Name(didChangeCurrentSongKey)
-        NotificationCenter.default.post(name: notification, object: nil)
+        NotificationService.setNotification(.didChangeSong)
     }
     
     func playSongButtonAction(albumID: Int) {

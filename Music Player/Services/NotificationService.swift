@@ -26,16 +26,16 @@ enum NotificationKeys {
     static let favoritePlaylistDidStart = Notification.Name(StringNotificationKeys.favoritePlaylistDidStart)
 }
 
-enum NotificationCases {
-    case play
-    case pause
-    case currentSongIsntNil
-    case currentSongIsNil
-    case didChangeSong
-    case favoriteToCurrent
-}
-
 final class NotificationService {
+    
+    enum NotificationCases {
+        case play
+        case pause
+        case currentSongIsntNil
+        case currentSongIsNil
+        case didChangeSong
+        case favoriteToCurrent
+    }
     
     static func setNotification(_ notificationCase: NotificationCases) {
         switch notificationCase {

@@ -18,6 +18,11 @@ class SongCell<T>: UITableViewCell {
     var buttonPlay = UIButton()
     var imageIs = StyleImageCell()
     
+    enum StyleImage {
+        case image
+        case title
+    }
+    
     var presenter: T!
     
     var song: Song? {
@@ -41,7 +46,19 @@ class SongCell<T>: UITableViewCell {
         setConstraints ()
     }
     
-    func setup(styleImage: StyleImageCell, set song: Song, presenter: T) {
+    // second variant of realization image's style
+    func setupSecondVersion(styleImage: StyleImage, song: Song, presenter: T) {
+        switch styleImage {
+        case .image:
+            imageIs = .image
+        case .title:
+            imageIs = .title
+        }
+        setSong(song)
+        self.presenter = presenter
+    }
+    
+    func setup(styleImage: StyleImageCell, song: Song, presenter: T) {
         imageIs = styleImage
         setSong(song)
         self.presenter = presenter

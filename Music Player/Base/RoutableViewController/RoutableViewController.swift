@@ -9,19 +9,13 @@
 import Foundation
 import UIKit
 
-enum BarButtons {
-    static let play = "playButton"
-    static let pause = "pauseButton"
-    static let forward = "goForward"
-    static let exit = "exit"
-}
-
-enum Module {
-    case main
-    case album
-}
-
 class RoutableViewController<T>: UIViewController {
+
+    private enum Module {
+        case main
+        case album
+    }
+    
     var presenter: T!
     
     private let router = Router()

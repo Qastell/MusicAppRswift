@@ -41,8 +41,8 @@ class AlbumDetailViewController: RoutableViewController<AlbumDetailPresenting> {
         setTableView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         presenter.checkSongObserver()
     }
     
@@ -82,7 +82,7 @@ extension AlbumDetailViewController: UITableViewDelegate, UITableViewDataSource 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AlbumDetailViewCell.identifier, for: indexPath) as? AlbumDetailViewCell else { return UITableViewCell() }
         
         if let album = self.album {
-            cell.setup(styleImage: .title, set: album.tracklist[indexPath.row], presenter: presenter)
+            cell.setup(styleImage: .title, song: album.tracklist[indexPath.row], presenter: presenter)
             cell.albumID = album.id
         }
         

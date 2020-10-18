@@ -69,7 +69,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier, for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
         
-        cell.setup(styleImage: .image, set: presenter.userPlaylist[indexPath.row], presenter: presenter)
+        cell.setup(styleImage: .image, song: presenter.userPlaylist[indexPath.row], presenter: presenter)
         cell.playlist = presenter.userPlaylist
         
         return cell
