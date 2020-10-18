@@ -4,7 +4,7 @@
 //
 //  Created by Кирилл Романенко on 23/05/2020.
 //  Copyright © 2020 Кирилл. All rights reserved.
-//
+//  Проверка работы Git
 
 import UIKit
 
