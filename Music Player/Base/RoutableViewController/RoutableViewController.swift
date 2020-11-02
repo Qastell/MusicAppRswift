@@ -4,7 +4,7 @@
 //
 //  Created by Кирилл Романенко on 21/07/2020.
 //  Copyright © 2020 Кирилл. All rights reserved.
-//
+// 
 
 import Foundation
 import UIKit
@@ -20,7 +20,15 @@ class RoutableViewController<T>: UIViewController {
     
     private let router = Router()
     private lazy var addBar = AdditionalTabBarView()
-    private var addBarIsHidden = true
+    
+    private var addBarIsHidden = true {
+        didSet {
+            changeContentInset(addBarIsHidden)
+        }
+    }
+    
+    var changeContentInset: ((Bool) -> ())!
+    
     private let frost = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
     
     private let currentSongIsntNil = NotificationKeys.currentSongIsntNilKey
@@ -64,6 +72,10 @@ class RoutableViewController<T>: UIViewController {
             setBlurTabBar(.album, willDisappear: true)
         }
     }
+    
+//    func changeContentInset(_ bool: Bool) {
+//        // метод для переопределения
+//    }
     
     fileprivate func createGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGest))

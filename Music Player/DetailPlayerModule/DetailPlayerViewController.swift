@@ -207,9 +207,11 @@ extension DetailPlayerViewController {
     private func setConstraints () {
         backgroundImage.contentMode = .scaleAspectFit
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
-        backgroundImage.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        backgroundImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        backgroundImage.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
-        backgroundImage.widthAnchor.constraint(equalTo: backgroundImage.heightAnchor).isActive = true
+        [
+            backgroundImage.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            backgroundImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            backgroundImage.heightAnchor.constraint(equalTo: view.heightAnchor),
+            backgroundImage.widthAnchor.constraint(equalTo: backgroundImage.heightAnchor)
+            ].forEach { $0.isActive = true }
     }
 }

@@ -34,10 +34,12 @@ class AlbumViewCell: UICollectionViewCell {
     
     private func setImageConstraints() {
         imageViewSong.translatesAutoresizingMaskIntoConstraints = false
-        imageViewSong.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-        imageViewSong.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        imageViewSong.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
-        imageViewSong.widthAnchor.constraint(equalTo: imageViewSong.heightAnchor).isActive = true
+        [
+            imageViewSong.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            imageViewSong.centerYAnchor.constraint(equalTo: centerYAnchor),
+            imageViewSong.heightAnchor.constraint(equalTo: heightAnchor),
+            imageViewSong.widthAnchor.constraint(equalTo: imageViewSong.heightAnchor)
+            ].forEach{ $0.isActive = true }
     }
     
     

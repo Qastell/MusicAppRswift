@@ -101,22 +101,26 @@ extension AdditionalTabBarView {
     }
     
     private func setConstraints() {
-        
-        barPlayButton.translatesAutoresizingMaskIntoConstraints = false
-        barPlayButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-        barPlayButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        barPlayButton.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        barPlayButton.widthAnchor.constraint(equalTo: barPlayButton.heightAnchor).isActive = true
-        
-        barForwardButton.translatesAutoresizingMaskIntoConstraints = false
-        barForwardButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
-        barForwardButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        barForwardButton.heightAnchor.constraint(equalTo: barPlayButton.heightAnchor).isActive = true
-        barForwardButton.widthAnchor.constraint(equalTo: barForwardButton.heightAnchor, multiplier: 1.3).isActive = true
-        
-        labelSong.translatesAutoresizingMaskIntoConstraints = false
-        labelSong.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        labelSong.leadingAnchor.constraint(equalTo: barPlayButton.trailingAnchor, constant: 20).isActive = true
-        labelSong.trailingAnchor.constraint(equalTo: barForwardButton.leadingAnchor, constant: -20).isActive = true
+        [
+            barPlayButton,
+            barForwardButton,
+            labelSong,
+            ].forEach{ $0.translatesAutoresizingMaskIntoConstraints = false }
+            
+        [
+            barPlayButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            barPlayButton.centerYAnchor.constraint(equalTo: centerYAnchor),
+            barPlayButton.heightAnchor.constraint(equalToConstant: 25),
+            barPlayButton.widthAnchor.constraint(equalTo: barPlayButton.heightAnchor),
+            
+            barForwardButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            barForwardButton.centerYAnchor.constraint(equalTo: centerYAnchor),
+            barForwardButton.heightAnchor.constraint(equalTo: barPlayButton.heightAnchor),
+            barForwardButton.widthAnchor.constraint(equalTo: barForwardButton.heightAnchor, multiplier: 1.3),
+            
+            labelSong.centerYAnchor.constraint(equalTo: centerYAnchor),
+            labelSong.leadingAnchor.constraint(equalTo: barPlayButton.trailingAnchor, constant: 20),
+            labelSong.trailingAnchor.constraint(equalTo: barForwardButton.leadingAnchor, constant: -20)
+            ].forEach{ $0.isActive = true }
     }
 }

@@ -97,25 +97,30 @@ class SongCell<T>: UITableViewCell {
     }
     
     private func setConstraints() {
-        buttonPlay.translatesAutoresizingMaskIntoConstraints = false
-        buttonPlay.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-        buttonPlay.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        buttonPlay.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8).isActive = true
-        buttonPlay.widthAnchor.constraint(equalTo: buttonPlay.heightAnchor).isActive = true
+        [
+            buttonPlay,
+            nameSong,
+            nameArtist,
+            duration
+            ].forEach{ $0.translatesAutoresizingMaskIntoConstraints = false }
         
-        nameSong.translatesAutoresizingMaskIntoConstraints = false
-        nameSong.leadingAnchor.constraint(equalTo: buttonPlay.trailingAnchor, constant: 10).isActive = true
-        nameSong.centerYAnchor.constraint(equalTo: buttonPlay.centerYAnchor, constant: -bounds.height/4).isActive = true
-        nameSong.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.65).isActive = true
-        
-        nameArtist.translatesAutoresizingMaskIntoConstraints = false
-        nameArtist.leadingAnchor.constraint(equalTo: buttonPlay.trailingAnchor, constant: 10).isActive = true
-        nameArtist.centerYAnchor.constraint(equalTo: buttonPlay.centerYAnchor, constant: bounds.height/4).isActive = true
-        nameArtist.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.65).isActive = true
-        
-        duration.translatesAutoresizingMaskIntoConstraints = false
-        duration.leadingAnchor.constraint(equalTo: trailingAnchor, constant: -60).isActive = true
-        duration.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        [
+            buttonPlay.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            buttonPlay.centerYAnchor.constraint(equalTo: centerYAnchor),
+            buttonPlay.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
+            buttonPlay.widthAnchor.constraint(equalTo: buttonPlay.heightAnchor),
+            
+            nameSong.leadingAnchor.constraint(equalTo: buttonPlay.trailingAnchor, constant: 10),
+            nameSong.centerYAnchor.constraint(equalTo: buttonPlay.centerYAnchor, constant: -bounds.height/4),
+            nameSong.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.65),
+            
+            nameArtist.leadingAnchor.constraint(equalTo: buttonPlay.trailingAnchor, constant: 10),
+            nameArtist.centerYAnchor.constraint(equalTo: buttonPlay.centerYAnchor, constant: bounds.height/4),
+            nameArtist.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.65),
+            
+            duration.leadingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
+            duration.centerYAnchor.constraint(equalTo: centerYAnchor)
+            ].forEach{ $0.isActive = true }
     }
     
     required init?(coder: NSCoder) {

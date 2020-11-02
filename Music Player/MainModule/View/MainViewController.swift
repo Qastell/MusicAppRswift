@@ -18,6 +18,8 @@ class MainViewController: RoutableViewController<MainPresenting> {
     }
     
     @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var bottomConstaintTableView: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,10 @@ class MainViewController: RoutableViewController<MainPresenting> {
         startSetup()
         setupDelegates()
         setItems ()
+        
+        changeContentInset = { addBarIsHidden in
+            self.myTableView.contentInset.bottom = addBarIsHidden ? 0 : 40
+        }
         
         myTableView.separatorInset.right = 15
         myTableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.identifier)
