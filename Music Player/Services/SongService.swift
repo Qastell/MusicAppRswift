@@ -20,7 +20,7 @@ struct Song {
 }
 
 struct Album {
-    var albumName: String
+    var name: String
     var tracklist: [Song]
     var id: Int
 }
@@ -127,9 +127,9 @@ class SongsService: SongsServicing {
         if albumStorage.isEmpty {
             createAlbum(song, albumName: albumName)
         } else {
-            if checkAlbumName(albumName) {
+            if checkAlbumName(name: albumName) {
                 for count in 0..<albumStorage.count {
-                    if albumStorage[count].albumName == albumName {
+                    if albumStorage[count].name == albumName {
                         albumStorage[count].tracklist.append(song)
                         albumStorage[count].tracklist[albumStorage[count].tracklist.count-1].indexSong = albumStorage[count].tracklist.count - 1
                         continue
@@ -145,13 +145,13 @@ class SongsService: SongsServicing {
         var tracklist = [Song]()
         tracklist.append(song)
         tracklist[tracklist.count-1].indexSong = 0
-        let album = Album(albumName: albumName, tracklist: tracklist, id: gettingIndex(isEmpty: albumStorage.isEmpty, array: albumStorage))
+        let album = Album(name: albumName, tracklist: tracklist, id: gettingIndex(isEmpty: albumStorage.isEmpty, array: albumStorage))
         albumStorage.append(album)
     }
     
-    private func checkAlbumName(_ albumName: String) -> Bool {
+    private func checkAlbumName(name ofAlbum: String) -> Bool {
         for album in albumStorage {
-            if album.albumName == albumName {
+            if album.name == ofAlbum {
                 return true
             }
         }
@@ -159,14 +159,14 @@ class SongsService: SongsServicing {
     }
     
     private func addSongToAlbum (albumName: String, artistName: String, songName: String ) {
-        
         songStorage.forEach( {
             if $0.nameArtist == artistName {
                 if $0.nameSong == songName {
-                    songStorage[$0.indexSong].albumName = albumName
-                    songStorage[$0.indexSong].imageSong = albumName
+                    var theSong = songStorage[$0.indexSong]
+                    theSong.albumName = albumName
+                    theSong.imageSong = albumName
                     
-                    addSongOrCreateAlbum(song: $0, albumName: albumName)
+                    addSongOrCreateAlbum(song: theSong, albumName: albumName)
                 }
             }
         } )

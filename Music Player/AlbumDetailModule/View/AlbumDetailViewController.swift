@@ -121,9 +121,9 @@ extension AlbumDetailViewController {
         
         albumImage.layer.cornerRadius = 10
         albumImage.layer.masksToBounds = true
-        albumImage.image = UIImage(named: album.albumName)
+        albumImage.image = UIImage(named: album.name)
         
-        albumName.text = album.albumName
+        albumName.text = album.name
         albumName.adjustsFontSizeToFitWidth = true
         
         nameArtist.text = album.tracklist[0].nameArtist

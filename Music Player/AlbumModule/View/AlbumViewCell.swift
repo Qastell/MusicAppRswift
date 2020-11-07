@@ -17,7 +17,7 @@ class AlbumViewCell: UICollectionViewCell {
     var album: Album? {
         didSet {
             guard let album = self.album else { return }
-            imageViewSong.image = UIImage(named: album.albumName)
+            imageViewSong.image = UIImage(named: album.name)
         }
     }
     
