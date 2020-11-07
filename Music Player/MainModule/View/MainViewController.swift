@@ -28,12 +28,13 @@ class MainViewController: RoutableViewController<MainPresenting> {
         setupDelegates()
         setItems ()
         
-        changeContentInset = { addBarIsHidden in
-            self.myTableView.contentInset.bottom = addBarIsHidden ? 0 : 40
-        }
-        
         myTableView.separatorInset.right = 15
         myTableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.identifier)
+        
+    }
+    
+    override func changeContentInset(_ bool: Bool) {
+        self.myTableView.contentInset.bottom = bool ? 0 : 40
     }
     
     //MARK: - private
@@ -73,6 +74,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier, for: indexPath) as? MainTableViewCell else { return UITableViewCell() }
         
         cell.setup(styleImage: .image, song: presenter.userPlaylist[indexPath.row], presenter: presenter)

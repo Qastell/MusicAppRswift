@@ -85,8 +85,7 @@ class DetailPlayerPresenter: DetailPlayerPresenting {
     
     required init(router: RouterProtocol) {
         self.router = router
-        
-        audioService.delegate = self
+        audioService.delegates.add(self)
         createObservers()
     }
     
@@ -117,6 +116,7 @@ class DetailPlayerPresenter: DetailPlayerPresenting {
     
     @objc func updateStatusPlaying (notification: NSNotification) {
         let isPlaying = notification.name == playNotification
+        
         view?.statusPlayingDidChange(isPlaying: isPlaying)
     }
     

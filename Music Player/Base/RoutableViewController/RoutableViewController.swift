@@ -27,7 +27,7 @@ class RoutableViewController<T>: UIViewController {
         }
     }
     
-    var changeContentInset: ((Bool) -> ())!
+//    var changeContentInset: ((Bool) -> ())?
     
     private let frost = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
     
@@ -73,9 +73,9 @@ class RoutableViewController<T>: UIViewController {
         }
     }
     
-//    func changeContentInset(_ bool: Bool) {
-//        // метод для переопределения
-//    }
+    func changeContentInset(_ bool: Bool) {
+        // метод для переопределения
+    }
     
     fileprivate func createGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGest))

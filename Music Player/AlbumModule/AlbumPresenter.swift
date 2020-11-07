@@ -25,7 +25,7 @@ class AlbumPresenter: AlbumPresenting {
     required init(router: RouterProtocol) {
         self.router = router
         
-        albums = songService.albumStorage
+        albums = songsService.albumStorage
     }
     
     func showDetailPlayer(from: UIViewController? = nil) {

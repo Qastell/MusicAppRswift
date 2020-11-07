@@ -13,8 +13,6 @@ class MainTableViewCell: SongCell<MainPresenting> {
 
     static let identifier = "MainTableViewCell"
     var playlist = [Song]()
-    
-    private let songNotification = NotificationKeys.didChangeCurrentSongKey
     private let playlistNotification = NotificationKeys.favoritePlaylistDidStart
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -43,15 +41,12 @@ class MainTableViewCell: SongCell<MainPresenting> {
     }
     
     private func createObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(didChangeSong), name: songNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didChangePlaylist), name: playlistNotification, object: nil)
     }
     
     @objc private func didChangePlaylist(notification: NSNotification) {
         
         playlist = presenter.userPlaylist
-        
-        //the playlist has been updated, now you need to update the song index
         
         playlist.forEach( {
             if var song = song {
@@ -60,12 +55,6 @@ class MainTableViewCell: SongCell<MainPresenting> {
                 }
             }
         } )
-    }
-    
-    @objc private func didChangeSong(notification: NSNotification) {
-        let current = song?.nameSong == presenter.currentSong?.nameSong && song?.nameArtist == presenter.currentSong?.nameArtist
-        let color = current ? #colorLiteral(red: 0.9254901961, green: 0.9254901961, blue: 0.9254901961, alpha: 1) : .white
-        backgroundColor = color
     }
     
     required init?(coder: NSCoder) {

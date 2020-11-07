@@ -43,7 +43,10 @@ class AlbumDetailViewController: RoutableViewController<AlbumDetailPresenting> {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        presenter.checkSongObserver()
+//        presenter.checkSongObserver()
+        audioService.delegates.invoke {
+            $0.didChangeSong(currentSong: audioService.currentSong)
+        }
     }
     
     //MARK: - selectors & IBActions

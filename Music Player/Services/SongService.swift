@@ -67,10 +67,6 @@ class SongsService: SongsServicing {
         addSongToAlbum(albumName: "DAMN.", artistName: "Kendrick Lamar", songName: "DNA.")
         
         addSongToAlbum(albumName: "SremmLife 2", artistName: "Rae Sremmurd", songName: "Black Beatles Ft. Gucci Mane")
-        
-        for song in songStorage {
-        sortingSongToAlbum(song: song)
-        }
     }
     
     private func gettingIndex<T> (isEmpty: Bool, array: [T]) -> Int {
@@ -127,44 +123,54 @@ class SongsService: SongsServicing {
         songStorage.append(song)
     }
     
-    private func sortingSongToAlbum(song: Song) {
-        if song.albumName != "" {
-            if !albumStorage.isEmpty {
+    private func addSongOrCreateAlbum(song: Song, albumName: String) {
+        if albumStorage.isEmpty {
+            createAlbum(song, albumName: albumName)
+        } else {
+            if checkAlbumName(albumName) {
                 for count in 0..<albumStorage.count {
-                    if song.albumName == albumStorage[count].albumName{
+                    if albumStorage[count].albumName == albumName {
                         albumStorage[count].tracklist.append(song)
                         albumStorage[count].tracklist[albumStorage[count].tracklist.count-1].indexSong = albumStorage[count].tracklist.count - 1
-                        break
-                    } else {
-                        var tracklist = [Song]()
-                        tracklist.append(song)
-                        tracklist[tracklist.count-1].indexSong = 0
-                        let album = Album(albumName: song.albumName, tracklist: tracklist, id: gettingIndex(isEmpty: albumStorage.isEmpty, array: albumStorage))
-                        albumStorage.append(album)
-                        break
+                        continue
                     }
                 }
             } else {
-                var tracklist = [Song]()
-                tracklist.append(song)
-                tracklist[tracklist.count-1].indexSong = 0
-                let album = Album(albumName: song.albumName, tracklist: tracklist, id: gettingIndex(isEmpty: albumStorage.isEmpty, array: albumStorage))
-                albumStorage.append(album)
+                createAlbum(song, albumName: albumName)
             }
         }
     }
     
-    private func addSongToAlbum (albumName: String, artistName: String ,songName: String ) {
+    private func createAlbum(_ song: Song, albumName: String) {
+        var tracklist = [Song]()
+        tracklist.append(song)
+        tracklist[tracklist.count-1].indexSong = 0
+        let album = Album(albumName: albumName, tracklist: tracklist, id: gettingIndex(isEmpty: albumStorage.isEmpty, array: albumStorage))
+        albumStorage.append(album)
+    }
+    
+    private func checkAlbumName(_ albumName: String) -> Bool {
+        for album in albumStorage {
+            if album.albumName == albumName {
+                return true
+            }
+        }
+        return false
+    }
+    
+    private func addSongToAlbum (albumName: String, artistName: String, songName: String ) {
+        
         songStorage.forEach( {
             if $0.nameArtist == artistName {
                 if $0.nameSong == songName {
                     songStorage[$0.indexSong].albumName = albumName
                     songStorage[$0.indexSong].imageSong = albumName
+                    
+                    addSongOrCreateAlbum(song: $0, albumName: albumName)
                 }
             }
         } )
     }
-    
 }
 
 

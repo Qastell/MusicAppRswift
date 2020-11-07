@@ -61,8 +61,9 @@ protocol AudioServicing: class {
 class AudioService: AudioServicing {
     
     var delegate: AudioServiceDelegate?
+    var delegates = MultiDelegate<AudioServiceDelegate>()
     
-    private var audioPlayer = AVAudioPlayer()
+    private var audioPlayer: AVAudioPlayer?
     
     var currentPlayList = [Song]()
     
@@ -78,7 +79,9 @@ class AudioService: AudioServicing {
     
     var currentSong: Song? {
         didSet{
-            delegate?.didChangeSong(currentSong: currentSong)
+            delegates.invoke {
+                $0.didChangeSong(currentSong: currentSong)
+            }
             
             NotificationService.setNotification(.didChangeSong)
         }
@@ -100,27 +103,43 @@ class AudioService: AudioServicing {
     
     var isPlaying: Bool {
         get {
-            return audioPlayer.isPlaying
+            if let audioPlayer = audioPlayer{
+                return audioPlayer.isPlaying
+            }
+            return false
         }
     }
     
-    var duration: TimeInterval { return audioPlayer.duration }
+    var duration: TimeInterval {
+        if let audioPlayer = audioPlayer{
+            return audioPlayer.duration
+        }
+        return 0.0
+    }
     
     var currentTime: TimeInterval {
         get {
-            return audioPlayer.currentTime
+            if let audioPlayer = audioPlayer{
+                return audioPlayer.currentTime
+            }
+            return 0.0
         }
         set {
-            audioPlayer.currentTime = newValue
+            if let audioPlayer = audioPlayer{
+                audioPlayer.currentTime = newValue
+            }
         }
     }
     
     var volume: Float? {
         get {
-            audioPlayer.volume
+            if let audioPlayer = audioPlayer{
+                return audioPlayer.volume
+            }
+            return 0.0
         }
         set {
-            if let volume = newValue {
+            if let volume = newValue, let audioPlayer = audioPlayer {
                 audioPlayer.volume = volume
             }
         }
@@ -128,36 +147,51 @@ class AudioService: AudioServicing {
     
     var volumeFloat: Float? {
         didSet {
-            if let volumeFloat = volumeFloat {
+            if let volumeFloat = volumeFloat, let audioPlayer = audioPlayer {
                 audioPlayer.volume = volumeFloat
             }
         }
     }
     
     init() {
-        audioPlayer.prepareToPlay()
-        _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
+        let _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateData), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateData () {
+        if String(format:"%.1f", currentTime) == String(format:"%.1f", duration-0.1) && isPlaying {
+            if currentSong?.nameSong == endingSong?.nameSong && currentSong?.nameArtist == endingSong?.nameArtist{
+                if let beginningSong = beginningSong {
+                    startPlayTheSong(beginningSong)
+                }
+            } else {
+                if let nextSong = nextSong {
+                    startPlayTheSong(nextSong)
+                }
+            }
+        }
     }
     
     //MARK: - Base function
     
     func play() {
         checkNilSong()
-        
+        if let audioPlayer = audioPlayer{
         audioPlayer.play()
-        
+        }
         NotificationService.setNotification(.play)
     }
     
     func pause() {
+        if let audioPlayer = audioPlayer{
         audioPlayer.pause()
-        
+        }
         NotificationService.setNotification(.pause)
     }
     
     func stop() {
+        if let audioPlayer = audioPlayer{
         audioPlayer.stop()
-        
+        }
         NotificationService.setNotification(.pause)
     }
     
@@ -249,20 +283,6 @@ class AudioService: AudioServicing {
         } else {
             if let endingSong = endingSong {
                 startPlayTheSong(endingSong)
-            }
-        }
-    }
-    
-    @objc func updateData () {
-        if String(format:"%.1f", currentTime) == String(format:"%.1f", duration-0.1) && isPlaying {
-            if currentSong?.nameSong == endingSong?.nameSong && currentSong?.nameArtist == endingSong?.nameArtist{
-                if let beginningSong = beginningSong {
-                    startPlayTheSong(beginningSong)
-                }
-            } else {
-                if let nextSong = nextSong {
-                    startPlayTheSong(nextSong)
-                }
             }
         }
     }

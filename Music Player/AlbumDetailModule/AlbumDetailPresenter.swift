@@ -68,17 +68,17 @@ class AlbumDetailPresenter: AlbumDetailPresenting {
     }
     
     func playSongButtonAction(albumID: Int) {
-        let song = songService.albumStorage[albumID].tracklist[0]
+        let song = songsService.albumStorage[albumID].tracklist[0]
         audioService.startPlayTheSong(song)
-        audioService.currentPlayList = songService.albumStorage[albumID].tracklist
+        audioService.currentPlayList = songsService.albumStorage[albumID].tracklist
     }
     
     func playSongCell(song: Song, albumID: Int) {
         audioService.userPlaylistIsPlaying = false
         
-        songService.albumStorage.forEach( {
+        songsService.albumStorage.forEach( {
             if $0.id == albumID {
-                audioService.currentPlayList = songService.albumStorage[$0.id].tracklist
+                audioService.currentPlayList = songsService.albumStorage[$0.id].tracklist
             }
         } )
         
@@ -103,15 +103,15 @@ class AlbumDetailPresenter: AlbumDetailPresenting {
     
     func mixTracklist() {
         if let album = self.album {
-            audioService.mixTracklist(tracklist: songService.albumStorage[album.id].tracklist)
+            audioService.mixTracklist(tracklist: songsService.albumStorage[album.id].tracklist)
         }
     }
     
     func showDetailPlayer(from: UIViewController? = nil, indexPath: IndexPath, albumID: Int) {
-        if audioService.songIsCurrent(songService.albumStorage[albumID].tracklist[indexPath.row]) {
+        if audioService.songIsCurrent(songsService.albumStorage[albumID].tracklist[indexPath.row]) {
             router?.go(to: .detailPlayer, from: from)
         } else {
-            audioService.currentPlayList = songService.albumStorage[albumID].tracklist
+            audioService.currentPlayList = songsService.albumStorage[albumID].tracklist
             audioService.userPlaylistIsPlaying = false
             audioService.startPlayTheSong(audioService.currentPlayList[indexPath.row])
             router?.go(to: .detailPlayer, from: from)

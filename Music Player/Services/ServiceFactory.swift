@@ -8,17 +8,8 @@
 
 import Foundation
 
-class ServiceFactory {
-    
-    func songService() -> SongsService {
-        return SongsService()
-    }
-    
-    func audioService() -> AudioService {
-        return AudioService()
-    }
-    
-}
+let audioService = AudioService()
+let songsService = SongsService()
 
 
 

@@ -8,10 +8,6 @@
 
 import UIKit
 
-let serviceFactory = ServiceFactory()
-let audioService = serviceFactory.audioService()
-let songService = serviceFactory.songService()
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -23,6 +19,7 @@ var window: UIWindow?
         tabBarController.tabBar.alpha = 0.9
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
+        window?.overrideUserInterfaceStyle = .light
 
         return true
     }

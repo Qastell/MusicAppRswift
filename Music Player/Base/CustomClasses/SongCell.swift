@@ -10,13 +10,15 @@ import UIKit
 
 typealias StyleImageCell = Bool
 
-class SongCell<T>: UITableViewCell {
+class SongCell<T>: UITableViewCell, AudioServiceDelegate {
     
     var nameSong = UILabel()
     var nameArtist = UILabel()
     var duration = UILabel()
     var buttonPlay = UIButton()
     var imageIs = StyleImageCell()
+    
+    let songNotification = NotificationKeys.didChangeCurrentSongKey
     
     enum StyleImage {
         case image
@@ -38,13 +40,34 @@ class SongCell<T>: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        contentView.isUserInteractionEnabled = false
+        
+        audioService.delegates.add(self)
+        
         setButtonSong()
         setLabelSong ()
         setLabelArtist()
         setDurationLabel()
         
         setConstraints ()
+//        createObservers()
     }
+    
+    func didChangeSong(currentSong: Song?) {
+        let songIsCurrent = song?.nameSong == currentSong?.nameSong && song?.nameArtist == currentSong?.nameArtist
+        let color = songIsCurrent ? #colorLiteral(red: 0.9254901961, green: 0.9254901961, blue: 0.9254901961, alpha: 1) : .white
+        backgroundColor = color
+    }
+    
+//    private func createObservers() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(didChangeSong), name: songNotification, object: nil)
+//    }
+//
+//    @objc private func didChangeSong(notification: NSNotification) {
+//        let songIsCurrent = song?.nameSong == audioService.currentSong?.nameSong && song?.nameArtist == audioService.currentSong?.nameArtist
+//        let color = songIsCurrent ? #colorLiteral(red: 0.9254901961, green: 0.9254901961, blue: 0.9254901961, alpha: 1) : .white
+//        backgroundColor = color
+//    }
     
     // second variant of realization image's style
     func setupSecondVersion(styleImage: StyleImage, song: Song, presenter: T) {
@@ -128,4 +151,3 @@ class SongCell<T>: UITableViewCell {
     }
     
 }
-

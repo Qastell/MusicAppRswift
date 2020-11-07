@@ -50,6 +50,7 @@
 		3F64DC2B24C7263C009768E3 /* RoutableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2A24C7263C009768E3 /* RoutableViewController.swift */; };
 		3F64DC2D24C72663009768E3 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2C24C72663009768E3 /* ServiceFactory.swift */; };
 		3F64DC2F24C72779009768E3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2E24C72779009768E3 /* Router.swift */; };
+		3F75BE3C2552ABA5000F86B7 /* Multidelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75BE3B2552ABA5000F86B7 /* Multidelegate.swift */; };
 		3FB776CF251F897C0061337F /* Bool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB776CE251F897C0061337F /* Bool+Extension.swift */; };
 		3FC9F4FC247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FC9F4FB247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 */; };
 		3FC9F4FE247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FC9F4FD247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 */; };
@@ -138,6 +139,7 @@
 		3F64DC2A24C7263C009768E3 /* RoutableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableViewController.swift; sourceTree = "<group>"; };
 		3F64DC2C24C72663009768E3 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		3F64DC2E24C72779009768E3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		3F75BE3B2552ABA5000F86B7 /* Multidelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multidelegate.swift; sourceTree = "<group>"; };
 		3FB776CE251F897C0061337F /* Bool+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extension.swift"; sourceTree = "<group>"; };
 		3FC9F4FB247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ayo & Teo - Rolex.mp3"; sourceTree = "<group>"; };
 		3FC9F4FD247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "XXXTENTACION - SAD!.mp3"; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 				3F6038612479446400E703E0 /* SongService.swift */,
 				3F397FA324829EEF00CE18F5 /* AudioService.swift */,
 				3F41A2D624DAC07600251A5D /* NotificationService.swift */,
+				3F75BE3B2552ABA5000F86B7 /* Multidelegate.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				3F6038642479479F00E703E0 /* MainTableViewCell.swift in Sources */,
 				3F64DC2824C7260D009768E3 /* BasePresenter.swift in Sources */,
 				3FD69C8024D19F97002E5DA1 /* UIImage+Extension.swift in Sources */,
+				3F75BE3C2552ABA5000F86B7 /* Multidelegate.swift in Sources */,
 				3FD69C8B24D2D603002E5DA1 /* AddTabBarView.swift in Sources */,
 				3F6038622479446400E703E0 /* SongService.swift in Sources */,
 				3F2AE91A24C084CF00B9CAF5 /* BarButton.swift in Sources */,

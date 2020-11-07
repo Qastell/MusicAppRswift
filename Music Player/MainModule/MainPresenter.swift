@@ -53,7 +53,7 @@ class MainPresenter: MainPresenting {
     
     var bufferUserPlaylist: UserSongs {
         get{
-            songService.userPlaylist
+            songsService.userPlaylist
         }
     }
     
@@ -116,16 +116,16 @@ class MainPresenter: MainPresenting {
     }
     
     func startSetup() {
-        for count in 0..<songService.songStorage.count{
-            if songService.songStorage[count].nameSong == "SICKO MODE" || songService.songStorage[count].nameSong == "The Hills" || songService.songStorage[count].nameSong == "SAD!" || songService.songStorage[count].nameSong == "Call Out My Name" || songService.songStorage[count].albumName == ""{
-                userPlaylist.append(songService.songStorage[count])
+        for count in 0..<songsService.songStorage.count{
+            if songsService.songStorage[count].nameSong == "SICKO MODE" || songsService.songStorage[count].nameSong == "The Hills" || songsService.songStorage[count].nameSong == "SAD!" || songsService.songStorage[count].nameSong == "Call Out My Name" || songsService.songStorage[count].albumName == ""{
+                userPlaylist.append(songsService.songStorage[count])
                 userPlaylist[userPlaylist.count-1].indexSong = userPlaylist.count-1
             }
         }
     }
     
     func mainViewDidStart() {
-        songService.userPlaylist = userPlaylist
+        songsService.userPlaylist = userPlaylist
         audioService.setCurrentUserPlaylist(userPlaylist)
     }
     
@@ -157,7 +157,7 @@ class MainPresenter: MainPresenting {
         }
         
         //update data about user's playlist
-        songService.userPlaylist = userPlaylist
+        songsService.userPlaylist = userPlaylist
         
         //notificate cells about changing favorite tracklist
         NotificationService.setNotification(.favoriteToCurrent)
