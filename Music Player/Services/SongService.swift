@@ -162,11 +162,10 @@ class SongsService: SongsServicing {
         songStorage.forEach( {
             if $0.nameArtist == artistName {
                 if $0.nameSong == songName {
-                    var theSong = songStorage[$0.indexSong]
-                    theSong.albumName = albumName
-                    theSong.imageSong = albumName
+                    songStorage[$0.indexSong].albumName = albumName
+                    songStorage[$0.indexSong].imageSong = albumName
                     
-                    addSongOrCreateAlbum(song: theSong, albumName: albumName)
+                    addSongOrCreateAlbum(song: songStorage[$0.indexSong], albumName: albumName)
                 }
             }
         } )
