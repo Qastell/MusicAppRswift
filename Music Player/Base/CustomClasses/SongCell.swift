@@ -59,16 +59,6 @@ class SongCell<T>: UITableViewCell, AudioServiceDelegate {
         backgroundColor = color
     }
     
-//    private func createObservers() {
-//        NotificationCenter.default.addObserver(self, selector: #selector(didChangeSong), name: songNotification, object: nil)
-//    }
-//
-//    @objc private func didChangeSong(notification: NSNotification) {
-//        let songIsCurrent = song?.nameSong == audioService.currentSong?.nameSong && song?.nameArtist == audioService.currentSong?.nameArtist
-//        let color = songIsCurrent ? #colorLiteral(red: 0.9254901961, green: 0.9254901961, blue: 0.9254901961, alpha: 1) : .white
-//        backgroundColor = color
-//    }
-    
     // second variant of realization image's style
     func setupSecondVersion(styleImage: StyleImage, song: Song, presenter: T) {
         switch styleImage {

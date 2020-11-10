@@ -11,11 +11,6 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
-    private enum tabBarImage {
-        static let table = "table"
-        static let collection = "collection"
-    }
-    
     var router = Router()
     
     override func viewDidLoad() {
@@ -26,12 +21,12 @@ class MainTabBarController: UITabBarController {
     func setupViews() {
         
         let mainVC = UINavigationController(rootViewController: router.create(.main))
-        mainVC.tabBarItem.image = UIImage(named: tabBarImage.table)
-        mainVC.tabBarItem.selectedImage = UIImage(named: tabBarImage.table)
+        mainVC.tabBarItem.image = R.image.table()
+        mainVC.tabBarItem.selectedImage = R.image.table()
         
         let albumVC = UINavigationController(rootViewController: router.create(.album))
-        albumVC.tabBarItem.image = UIImage(named: tabBarImage.collection)
-        albumVC.tabBarItem.selectedImage = UIImage(named: tabBarImage.collection)
+        albumVC.tabBarItem.image = R.image.collection()
+        albumVC.tabBarItem.selectedImage = R.image.collection()
         albumVC.loadViewIfNeeded()
         
         viewControllers = [mainVC, albumVC]

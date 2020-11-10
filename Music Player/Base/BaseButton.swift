@@ -11,9 +11,9 @@ import UIKit
 
 class BaseButton: UIButton {
 
-    init(imageName: String, frame: CGRect, target: Any?, action: Selector) {
+    init(image: UIImage, frame: CGRect, target: Any?, action: Selector) {
         super.init(frame: frame)
-        setImage(UIImage(named: imageName), for: .normal)
+        setImage(image, for: .normal)
         imageView?.contentMode = .scaleAspectFit
         flash()
         addTarget(target, action: action, for: .touchUpInside)

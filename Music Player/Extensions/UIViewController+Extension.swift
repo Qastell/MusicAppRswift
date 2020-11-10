@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    class func instantiateFromStoryboard(_ name: String = "Main") -> Self {
-        return instantiateController(storyboardName: name)
+    class func instantiateFromStoryboard() -> Self {
+        return instantiateController()
     }
 
-    fileprivate class func instantiateController<T>(storyboardName: String) -> T {
-        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+    fileprivate class func instantiateController<T>() -> T {
+        let storyboard = R.storyboard.main()
         let controller = storyboard.instantiateViewController(
             withIdentifier: String(describing: self)) as! T
         return controller

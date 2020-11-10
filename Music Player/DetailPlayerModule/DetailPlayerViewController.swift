@@ -43,11 +43,11 @@ class DetailPlayerViewController: RoutableViewController<DetailPlayerPresenting>
     var valueVolumeSlider = Float() {
         didSet {
             if valueVolumeSlider == 0 {
-                volumeSlider.setThumbImage(UIImage(named: Buttons.volumeSliderIsntEnable), for: .normal)
+                volumeSlider.setThumbImage(R.image.soundnotEnable(), for: .normal)
             } else if valueVolumeSlider > 0 && valueVolumeSlider < volumeSlider.maximumValue*0.75{
-                volumeSlider.setThumbImage(UIImage(named: Buttons.volumeSliderHalf), for: .normal)
+                volumeSlider.setThumbImage(R.image.soundEnableLittle(), for: .normal)
             } else if valueVolumeSlider >= volumeSlider.maximumValue*0.75 {
-                volumeSlider.setThumbImage(UIImage(named: Buttons.volumeSliderFull), for: .normal)
+                volumeSlider.setThumbImage(R.image.soundEnable(), for: .normal)
             }
         }
     }
@@ -84,11 +84,11 @@ class DetailPlayerViewController: RoutableViewController<DetailPlayerPresenting>
         }
         
         if valueVolumeSlider == 0 {
-            volumeSlider.setThumbImage(UIImage(named: Buttons.volumeSliderIsntEnable), for: .normal)
+            volumeSlider.setThumbImage(R.image.soundnotEnable(), for: .normal)
         } else if valueVolumeSlider > 0 && valueVolumeSlider < volumeSlider.maximumValue*0.75{
-            volumeSlider.setThumbImage(UIImage(named: Buttons.volumeSliderHalf), for: .normal)
+            volumeSlider.setThumbImage(R.image.soundEnableLittle(), for: .normal)
         } else if valueVolumeSlider >= volumeSlider.maximumValue*0.75 {
-            volumeSlider.setThumbImage(UIImage(named: Buttons.volumeSliderFull), for: .normal)
+            volumeSlider.setThumbImage(R.image.soundEnable(), for: .normal)
         }
     }
     
@@ -121,12 +121,12 @@ class DetailPlayerViewController: RoutableViewController<DetailPlayerPresenting>
         }
         
         let isPlaying = presenter.isPlaying == true
-        let image = isPlaying ? UIImage(named: Buttons.pause) : UIImage(named: Buttons.play)
+        let image = isPlaying ? R.image.pauseButton() : R.image.playButton()
         playButton.setImage(image, for: .normal)
         
         songDurationSlider.isContinuous = false
         
-        volumeSlider.setThumbImage(UIImage(named: Buttons.volumeSliderFull), for: .normal)
+        volumeSlider.setThumbImage(R.image.soundEnable(), for: .normal)
     }
     
     @objc func updateData () {
@@ -142,10 +142,10 @@ class DetailPlayerViewController: RoutableViewController<DetailPlayerPresenting>
     
     @IBAction func playPauseButton(_ sender: Any) {
         if presenter.isPlaying{
-            playButton.setImage(UIImage(named: Buttons.play), for: .normal)
+            playButton.setImage(R.image.playButton(), for: .normal)
             presenter.pause()
         } else {
-            playButton.setImage(UIImage(named: Buttons.pause), for: .normal)
+            playButton.setImage(R.image.pauseButton(), for: .normal)
             presenter.play()
         }
     }
@@ -169,11 +169,11 @@ class DetailPlayerViewController: RoutableViewController<DetailPlayerPresenting>
         presenter.currentTime = TimeInterval(sender.value)
         presenter.play()
         
-        playButton.setImage(UIImage(named: Buttons.pause), for: .normal)
+        playButton.setImage(R.image.pauseButton(), for: .normal)
         
         if sender.value == self.songDurationSlider.minimumValue {
             presenter.stop()
-            playButton.setImage(UIImage(named: Buttons.play), for: .normal)
+            playButton.setImage(R.image.playButton(), for: .normal)
         }
     }
     
@@ -185,7 +185,7 @@ class DetailPlayerViewController: RoutableViewController<DetailPlayerPresenting>
 
 extension DetailPlayerViewController: DetailPlayerViewProtocol {
     func statusPlayingDidChange(isPlaying: Bool) {
-        let image = isPlaying ? UIImage(named: Buttons.pause) : UIImage(named: Buttons.play)
+        let image = isPlaying ? R.image.pauseButton() : R.image.playButton()
         playButton.setImage(image, for: .normal)
     }
     

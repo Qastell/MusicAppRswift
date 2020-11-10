@@ -133,7 +133,7 @@ extension MainViewController {
         let standart = CGRect(x: (navigationController.navigationBar.bounds.width/2)-125, y: titleView.frame.minY-3, width: navigationController.navigationBar.frame.height/3, height: navigationController.navigationBar.frame.height/3)
         
         let frameRandomButton = CGRect(x: (navigationController.navigationBar.bounds.width/2)-185, y: standart.origin.y, width: standart.height*1.2, height: standart.height)
-        _ = NavigationBarButton(imageName: Buttons.randomize,
+        _ = NavigationBarButton(image: R.image.randomSong()!,
                       navigationController: navigationController,
                       frame: frameRandomButton,
                       target: self,

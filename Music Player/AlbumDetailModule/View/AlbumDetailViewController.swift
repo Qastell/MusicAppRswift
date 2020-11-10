@@ -43,7 +43,6 @@ class AlbumDetailViewController: RoutableViewController<AlbumDetailPresenting> {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        presenter.checkSongObserver()
         audioService.delegates.invoke {
             $0.didChangeSong(currentSong: audioService.currentSong)
         }
@@ -82,7 +81,7 @@ extension AlbumDetailViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: AlbumDetailViewCell.identifier, for: indexPath) as? AlbumDetailViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.albumTableViewCell, for: indexPath) else { return UITableViewCell() }
         
         if let album = self.album {
             cell.setup(styleImage: .title, song: album.tracklist[indexPath.row], presenter: presenter)

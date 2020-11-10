@@ -18,7 +18,7 @@ protocol AddTabBarPresenterProtocol {
     var isPlaying: Bool { get }
     var currentSong: Song? { get }
     
-    func playPause(playButton: UIButton, setPlayImage: String, setPauseImage: String)
+    func playPause(playButton: UIButton, setPlayImage: UIImage, setPauseImage: UIImage)
     func playNextSong()
 }
 
@@ -60,7 +60,7 @@ class AddTabBarPresenter: AddTabBarPresenterProtocol {
         view?.songDidChange(currentSong: currentSong)
     }
     
-    func playPause(playButton: UIButton, setPlayImage: String, setPauseImage: String) {
+    func playPause(playButton: UIButton, setPlayImage: UIImage, setPauseImage: UIImage) {
         audioService.changeStatusPlaying(playButton: playButton, setPlayImage: setPlayImage, setPauseImage: setPauseImage)
     }
     

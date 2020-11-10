@@ -26,7 +26,7 @@ protocol AlbumDetailPresenting: BasePresenter {
     
     func playSongButtonAction(albumID: Int)
     func configure(album: Album)
-    func playPause(playButton: UIButton, setPlayImage: String, setPauseImage: String)
+    func playPause(playButton: UIButton, setPlayImage: UIImage, setPauseImage: UIImage)
     func mixTracklist()
     func playSongCell(song: Song, albumID: Int)
     func showDetailPlayer(from: UIViewController?, indexPath: IndexPath, albumID: Int)
@@ -97,7 +97,7 @@ class AlbumDetailPresenter: AlbumDetailPresenting {
         }
     }
     
-    func playPause(playButton: UIButton, setPlayImage: String, setPauseImage: String) {
+    func playPause(playButton: UIButton, setPlayImage: UIImage, setPauseImage: UIImage) {
         audioService.changeStatusPlaying(playButton: playButton, setPlayImage: setPlayImage, setPauseImage: setPauseImage)
     }
     

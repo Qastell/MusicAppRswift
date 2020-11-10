@@ -53,7 +53,7 @@ protocol AudioServicing: class {
     
     func goBack()
     
-    func changeStatusPlaying (playButton: UIButton, setPlayImage: String, setPauseImage: String)
+    func changeStatusPlaying (playButton: UIButton, setPlayImage: UIImage, setPauseImage: UIImage)
     
     func checkNilSong()
 }
@@ -287,19 +287,19 @@ class AudioService: AudioServicing {
         }
     }
     
-    func changeStatusPlaying (playButton: UIButton, setPlayImage: String, setPauseImage: String) {
+    func changeStatusPlaying (playButton: UIButton, setPlayImage: UIImage, setPauseImage: UIImage) {
         if currentSong == nil {
-            playButton.setImage(UIImage(named: setPauseImage), for: .normal)
+            playButton.setImage(setPauseImage, for: .normal)
             if let beginningSong = beginningSong {
                 startPlayTheSong(beginningSong)
             }
         } else {
             if isPlaying {
                 pause()
-                playButton.setImage(UIImage(named: setPlayImage), for: .normal)
+                playButton.setImage(setPlayImage, for: .normal)
             } else {
                 play()
-                playButton.setImage(UIImage(named: setPauseImage), for: .normal)
+                playButton.setImage(setPauseImage, for: .normal)
             }
         }
     }  

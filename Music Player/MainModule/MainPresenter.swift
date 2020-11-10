@@ -34,7 +34,7 @@ protocol MainPresenting: BasePresenter {
     func presentDetailPlayerView(from: UIViewController?, indexPath: IndexPath)
     func mainViewDidStart()
     func startSetup()
-    func playPause(playButton: UIButton, setPlayImage: String, setPauseImage: String)
+    func playPause(playButton: UIButton, setPlayImage: UIImage, setPauseImage: UIImage)
     func goForward()
     func mixTracklist()
     func cellPlayButtonAction(userPlaylist: [Song], cellSong: Song)
@@ -93,7 +93,7 @@ class MainPresenter: MainPresenting {
         audioService.mixTracklist(tracklist: userPlaylist)
     }
     
-    func playPause(playButton: UIButton, setPlayImage: String, setPauseImage: String) {
+    func playPause(playButton: UIButton, setPlayImage: UIImage, setPauseImage: UIImage) {
         audioService.changeStatusPlaying(playButton: playButton, setPlayImage: setPlayImage, setPauseImage: setPauseImage)
     }
     

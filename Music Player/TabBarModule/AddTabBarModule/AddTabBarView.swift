@@ -10,13 +10,6 @@ import UIKit
 
 class AdditionalTabBarView: UIView {
     
-    private enum BarButtons {
-        static let play = "playButton"
-        static let pause = "pauseButton"
-        static let forward = "goForward"
-        static let exit = "exit"
-    }
-    
     var presenter = AddTabBarPresenter()
     
     let barPlayButton = UIButton()
@@ -35,7 +28,7 @@ class AdditionalTabBarView: UIView {
     }
     
     @objc private func playButtonAction() {
-        presenter.playPause(playButton: barPlayButton, setPlayImage: BarButtons.play, setPauseImage: BarButtons.pause)
+        presenter.playPause(playButton: barPlayButton, setPlayImage: R.image.playButton()!, setPauseImage: R.image.pauseButton()!)
     }
     
     @objc private func forwardButtonAction() {
@@ -48,8 +41,8 @@ class AdditionalTabBarView: UIView {
         } else {
             alpha = 1
             
-            let playButtonImage = presenter.isPlaying ? UIImage(named: BarButtons.pause) : UIImage(named: BarButtons.play)
-            let forwardButtonImage = presenter.isPlaying ? UIImage(named: BarButtons.forward) : UIImage(named: BarButtons.exit)
+            let playButtonImage = presenter.isPlaying ? R.image.pauseButton() : R.image.playButton()
+            let forwardButtonImage = presenter.isPlaying ? R.image.goForward() : R.image.exit()
             barPlayButton.setImage(playButtonImage, for: .normal)
             barForwardButton.setImage(forwardButtonImage, for: .normal)
             
@@ -68,8 +61,8 @@ extension AdditionalTabBarView: AddTabBarViewProtocol {
     }
     
     func statusPlayingDidChange(isPlaying: Bool) {
-        let playButtonImage = isPlaying ? UIImage(named: BarButtons.pause) : UIImage(named: BarButtons.play)
-        let forwardButtonImage = isPlaying ? UIImage(named: BarButtons.forward) : UIImage(named: BarButtons.exit)
+        let playButtonImage = isPlaying ? R.image.pauseButton() : R.image.playButton()
+        let forwardButtonImage = isPlaying ? R.image.goForward() : R.image.exit()
         barPlayButton.setImage(playButtonImage, for: .normal)
         barForwardButton.setImage(forwardButtonImage, for: .normal)
     }
@@ -83,11 +76,11 @@ extension AdditionalTabBarView {
         frost.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
         self.addSubview(frost)
 
-        barPlayButton.setImage(UIImage(named: BarButtons.play), for: .normal)
+        barPlayButton.setImage(R.image.playButton(), for: .normal)
         barPlayButton.addTarget(self, action: #selector(playButtonAction), for: .touchUpInside)
         self.addSubview(barPlayButton)
 
-        barForwardButton.setImage(UIImage(named: BarButtons.forward), for: .normal)
+        barForwardButton.setImage(R.image.goForward(), for: .normal)
         barForwardButton.addTarget(self, action: #selector(forwardButtonAction), for: .touchUpInside)
         self.addSubview(barForwardButton)
         
