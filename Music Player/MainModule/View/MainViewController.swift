@@ -13,7 +13,6 @@ class MainViewController: RoutableViewController<MainPresenting> {
     
     
     @IBOutlet weak var myTableView: UITableView!
-    @IBOutlet weak var bottomConstaintTableView: NSLayoutConstraint!
     
     
     override func viewDidLoad() {

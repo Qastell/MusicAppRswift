@@ -6,6 +6,7 @@ target 'Music Player' do
   use_frameworks!
 
 pod 'R.swift'
+pod 'SnapKit'
 
   # Pods for Music Player
 

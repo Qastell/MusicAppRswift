@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class AlbumViewCell: UICollectionViewCell {
     
@@ -33,13 +34,11 @@ class AlbumViewCell: UICollectionViewCell {
     }
     
     private func setImageConstraints() {
-        imageViewSong.translatesAutoresizingMaskIntoConstraints = false
-        [
-            imageViewSong.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            imageViewSong.centerYAnchor.constraint(equalTo: centerYAnchor),
-            imageViewSong.heightAnchor.constraint(equalTo: heightAnchor),
-            imageViewSong.widthAnchor.constraint(equalTo: imageViewSong.heightAnchor)
-            ].forEach{ $0.isActive = true }
+        imageViewSong.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(10)
+            make.centerY.height.equalToSuperview()
+            make.width.equalTo(imageViewSong.snp.height)
+        }
     }
     
     

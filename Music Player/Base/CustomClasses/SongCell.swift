@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 typealias StyleImageCell = Bool
 
@@ -110,30 +111,29 @@ class SongCell<T>: UITableViewCell, AudioServiceDelegate {
     }
     
     private func setConstraints() {
-        [
-            buttonPlay,
-            nameSong,
-            nameArtist,
-            duration
-            ].forEach{ $0.translatesAutoresizingMaskIntoConstraints = false }
+        buttonPlay.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(10)
+            make.centerY.equalToSuperview()
+            make.height.equalToSuperview().multipliedBy(0.8)
+            make.width.equalTo(buttonPlay.snp.height)
+        }
         
-        [
-            buttonPlay.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            buttonPlay.centerYAnchor.constraint(equalTo: centerYAnchor),
-            buttonPlay.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
-            buttonPlay.widthAnchor.constraint(equalTo: buttonPlay.heightAnchor),
-            
-            nameSong.leadingAnchor.constraint(equalTo: buttonPlay.trailingAnchor, constant: 10),
-            nameSong.centerYAnchor.constraint(equalTo: buttonPlay.centerYAnchor, constant: -bounds.height/4),
-            nameSong.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.65),
-            
-            nameArtist.leadingAnchor.constraint(equalTo: buttonPlay.trailingAnchor, constant: 10),
-            nameArtist.centerYAnchor.constraint(equalTo: buttonPlay.centerYAnchor, constant: bounds.height/4),
-            nameArtist.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.65),
-            
-            duration.leadingAnchor.constraint(equalTo: trailingAnchor, constant: -60),
-            duration.centerYAnchor.constraint(equalTo: centerYAnchor)
-            ].forEach{ $0.isActive = true }
+        nameSong.snp.makeConstraints { make in
+            make.left.equalTo(buttonPlay.snp.right).offset(10)
+            make.centerY.equalTo(buttonPlay.snp.centerY).offset(-bounds.height/4)
+            make.width.equalToSuperview().multipliedBy(0.65)
+        }
+        
+        nameArtist.snp.makeConstraints { make in
+            make.left.equalTo(buttonPlay.snp.right).offset(10)
+            make.centerY.equalTo(buttonPlay.snp.centerY).offset(bounds.height/4)
+            make.width.equalToSuperview().multipliedBy(0.65)
+        }
+        
+        duration.snp.makeConstraints { make in
+            make.left.equalTo(snp.right).offset(-60)
+            make.centerY.equalToSuperview()
+        }
     }
     
     required init?(coder: NSCoder) {

@@ -2,19 +2,23 @@ PODS:
   - R.swift (5.3.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
+  - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - R.swift
+  - SnapKit
 
 SPEC REPOS:
   trunk:
     - R.swift
     - R.swift.Library
+    - SnapKit
 
 SPEC CHECKSUMS:
   R.swift: 4170fb7161c67be3bc1a847040b79367d69c419f
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 93404df0a4a15df625ebfb1568f80685e7819db6
+PODFILE CHECKSUM: 8c335dfd56267185c7f23cc771ef058d3a39ae3b
 
 COCOAPODS: 1.10.0

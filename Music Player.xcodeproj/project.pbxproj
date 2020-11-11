@@ -49,9 +49,6 @@
 		3F6038642479479F00E703E0 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6038632479479F00E703E0 /* MainTableViewCell.swift */; };
 		3F641FB0255AE2CC00C85227 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 3F641FAF255AE2CC00C85227 /* Rswift */; };
 		3F641FCD255AFB3200C85227 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F641FCF255AFB3200C85227 /* Localizable.strings */; };
-		3F641FF3255B9B1A00C85227 /* Gardens_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F641FF1255B9B1A00C85227 /* Gardens_Regular.ttf */; };
-		3F641FF4255B9B1A00C85227 /* Lemon_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F641FF2255B9B1A00C85227 /* Lemon_Regular.ttf */; };
-		3F641FF8255B9BBC00C85227 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F641FF7255B9BBC00C85227 /* R.generated.swift */; };
 		3F64DC2524C72570009768E3 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2424C72570009768E3 /* MainPresenter.swift */; };
 		3F64DC2824C7260D009768E3 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2724C7260D009768E3 /* BasePresenter.swift */; };
 		3F64DC2B24C7263C009768E3 /* RoutableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2A24C7263C009768E3 /* RoutableViewController.swift */; };
@@ -59,6 +56,9 @@
 		3F64DC2F24C72779009768E3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2E24C72779009768E3 /* Router.swift */; };
 		3F75BE3C2552ABA5000F86B7 /* Multidelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F75BE3B2552ABA5000F86B7 /* Multidelegate.swift */; };
 		3FB776CF251F897C0061337F /* Bool+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB776CE251F897C0061337F /* Bool+Extension.swift */; };
+		3FBB1601255C320900D0AA72 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBB1600255C320900D0AA72 /* R.generated.swift */; };
+		3FBB1627255C36DF00D0AA72 /* Gardens_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FBB1626255C36DF00D0AA72 /* Gardens_Regular.ttf */; };
+		3FBB162B255C36E500D0AA72 /* Lemon_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FBB162A255C36E500D0AA72 /* Lemon_Regular.ttf */; };
 		3FC9F4FC247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FC9F4FB247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 */; };
 		3FC9F4FE247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FC9F4FD247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 */; };
 		3FC9F500247ACBB40079B4EC /* AlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9F4FF247ACBB40079B4EC /* AlbumViewCell.swift */; };
@@ -161,9 +161,6 @@
 		3F641FC4255AFA8300C85227 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		3F641FCE255AFB3200C85227 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3F641FD0255AFB3700C85227 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3F641FF1255B9B1A00C85227 /* Gardens_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gardens_Regular.ttf; path = ../../../../Downloads/Gardens_Regular.ttf; sourceTree = "<group>"; };
-		3F641FF2255B9B1A00C85227 /* Lemon_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Lemon_Regular.ttf; path = ../../../../Downloads/Lemon_Regular.ttf; sourceTree = "<group>"; };
-		3F641FF7255B9BBC00C85227 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		3F64DC2424C72570009768E3 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		3F64DC2724C7260D009768E3 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		3F64DC2A24C7263C009768E3 /* RoutableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +168,9 @@
 		3F64DC2E24C72779009768E3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		3F75BE3B2552ABA5000F86B7 /* Multidelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multidelegate.swift; sourceTree = "<group>"; };
 		3FB776CE251F897C0061337F /* Bool+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extension.swift"; sourceTree = "<group>"; };
+		3FBB1600255C320900D0AA72 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		3FBB1626255C36DF00D0AA72 /* Gardens_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gardens_Regular.ttf; path = ../../../../Downloads/Gardens_Regular.ttf; sourceTree = "<group>"; };
+		3FBB162A255C36E500D0AA72 /* Lemon_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Lemon_Regular.ttf; path = ../../../../Downloads/Lemon_Regular.ttf; sourceTree = "<group>"; };
 		3FC9F4FB247AC8D70079B4EC /* Ayo & Teo - Rolex.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ayo & Teo - Rolex.mp3"; sourceTree = "<group>"; };
 		3FC9F4FD247AC8E70079B4EC /* XXXTENTACION - SAD!.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "XXXTENTACION - SAD!.mp3"; sourceTree = "<group>"; };
 		3FC9F4FF247ACBB40079B4EC /* AlbumViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewCell.swift; sourceTree = "<group>"; };
@@ -309,7 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				3F641FF0255B9AFC00C85227 /* Fonts */,
-				3F641FF7255B9BBC00C85227 /* R.generated.swift */,
+				3FBB1600255C320900D0AA72 /* R.generated.swift */,
 				3FA077F024E042BF000E5E4A /* Storyboard+AppDelegate */,
 				3F4E3EF724D03E78002AAD23 /* TabBarModule */,
 				3F3E765E24A10B1200B076CB /* MainModule */,
@@ -322,8 +322,7 @@
 				3F60384C24792D7F00E703E0 /* Songs */,
 				3F36B66D247FC29A006258B2 /* LaunchScreen */,
 				3F60382A24792D4C00E703E0 /* Info.plist */,
-				3F4451F2247EB1AD00DDF99F /* Assets.xcassets */,
-				3F641FCF255AFB3200C85227 /* Localizable.strings */,
+				3FBB15F9255C30E500D0AA72 /* Resources */,
 			);
 			path = "Music Player";
 			sourceTree = "<group>";
@@ -405,8 +404,8 @@
 		3F641FF0255B9AFC00C85227 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				3F641FF1255B9B1A00C85227 /* Gardens_Regular.ttf */,
-				3F641FF2255B9B1A00C85227 /* Lemon_Regular.ttf */,
+				3FBB1626255C36DF00D0AA72 /* Gardens_Regular.ttf */,
+				3FBB162A255C36E500D0AA72 /* Lemon_Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -456,6 +455,15 @@
 				3F60381A24792D4900E703E0 /* AppDelegate.swift */,
 			);
 			path = "Storyboard+AppDelegate";
+			sourceTree = "<group>";
+		};
+		3FBB15F9255C30E500D0AA72 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F4451F2247EB1AD00DDF99F /* Assets.xcassets */,
+				3F641FCF255AFB3200C85227 /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		3FD69C8924D2D5D3002E5DA1 /* RoutableViewController */ = {
@@ -628,7 +636,7 @@
 				3F2913A7248A315200977368 /* Travis Scott - SKELETONS ft The Weeknd.mp3 in Resources */,
 				3F2913AF248A317000977368 /* Travis Scott - BUTTERFLY EFFECT.mp3 in Resources */,
 				3FDAA72D2494EB0300BC791C /* Kendrick Lamar - DNA..mp3 in Resources */,
-				3F641FF3255B9B1A00C85227 /* Gardens_Regular.ttf in Resources */,
+				3FBB1627255C36DF00D0AA72 /* Gardens_Regular.ttf in Resources */,
 				3F60385024792DB400E703E0 /* Travis Scott - The Scotts.mp3 in Resources */,
 				3F60385424792DC700E703E0 /* Don Toliver - No Idea.mp3 in Resources */,
 				3F29139F248A2AD600977368 /* Travis Scott - HIGHEST IN THE ROOM.mp3 in Resources */,
@@ -643,7 +651,7 @@
 				3FDAA7272494E11200BC791C /* Shawn Mendes - In My Blood.mp3 in Resources */,
 				3F641FCD255AFB3200C85227 /* Localizable.strings in Resources */,
 				3F2913AB248A316000977368 /* Travis Scott - Stargazing.mp3 in Resources */,
-				3F641FF4255B9B1A00C85227 /* Lemon_Regular.ttf in Resources */,
+				3FBB162B255C36E500D0AA72 /* Lemon_Regular.ttf in Resources */,
 				3FDAA72F2494EC3000BC791C /* Rae Sremmurd - Black Beatles Ft. Gucci Mane.mp3 in Resources */,
 				3F29139B248A2AA900977368 /* Oliver Tree - Hurt.mp3 in Resources */,
 				3FDAA72B2494E27700BC791C /* Ariana Grande - 7 Rings.mp3 in Resources */,
@@ -685,17 +693,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$TEMP_DIR/rswift-lastrun",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$(DERIVED_FILE_DIR)/Pods-Music Player-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8C21AFCA6ADEB4F46CC5B76F /* [CP] Check Pods Manifest.lock */ = {
@@ -803,7 +812,7 @@
 				3F41A2D724DAC07600251A5D /* NotificationService.swift in Sources */,
 				3FD69C8424D19FCC002E5DA1 /* UIButton+Extension.swift in Sources */,
 				3F64DC2524C72570009768E3 /* MainPresenter.swift in Sources */,
-				3F641FF8255B9BBC00C85227 /* R.generated.swift in Sources */,
+				3FBB1601255C320900D0AA72 /* R.generated.swift in Sources */,
 				3F64DC2F24C72779009768E3 /* Router.swift in Sources */,
 				3FDF613924C7347300D23C1E /* AlbumDetailPresenter.swift in Sources */,
 				3FB776CF251F897C0061337F /* Bool+Extension.swift in Sources */,

@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import SnapKit
 
 class DetailPlayerViewController: RoutableViewController<DetailPlayerPresenting> {
     
@@ -195,12 +196,10 @@ extension DetailPlayerViewController {
     
     private func setConstraints () {
         backgroundImage.contentMode = .scaleAspectFit
-        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
-        [
-            backgroundImage.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            backgroundImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            backgroundImage.heightAnchor.constraint(equalTo: view.heightAnchor),
-            backgroundImage.widthAnchor.constraint(equalTo: backgroundImage.heightAnchor)
-            ].forEach { $0.isActive = true }
+        backgroundImage.snp.makeConstraints { make in
+            make.centerY.equalTo(view.snp.centerY)
+            make.centerX.equalTo(view.snp.centerX)
+            make.width.height.equalTo(view.snp.height)
+        }
     }
 }

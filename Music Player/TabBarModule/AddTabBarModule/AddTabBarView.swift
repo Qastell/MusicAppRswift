@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class AdditionalTabBarView: UIView {
     
@@ -94,26 +95,23 @@ extension AdditionalTabBarView {
     }
     
     private func setConstraints() {
-        [
-            barPlayButton,
-            barForwardButton,
-            labelSong,
-            ].forEach{ $0.translatesAutoresizingMaskIntoConstraints = false }
-            
-        [
-            barPlayButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            barPlayButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            barPlayButton.heightAnchor.constraint(equalToConstant: 25),
-            barPlayButton.widthAnchor.constraint(equalTo: barPlayButton.heightAnchor),
-            
-            barForwardButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            barForwardButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            barForwardButton.heightAnchor.constraint(equalTo: barPlayButton.heightAnchor),
-            barForwardButton.widthAnchor.constraint(equalTo: barForwardButton.heightAnchor, multiplier: 1.3),
-            
-            labelSong.centerYAnchor.constraint(equalTo: centerYAnchor),
-            labelSong.leadingAnchor.constraint(equalTo: barPlayButton.trailingAnchor, constant: 20),
-            labelSong.trailingAnchor.constraint(equalTo: barForwardButton.leadingAnchor, constant: -20)
-            ].forEach{ $0.isActive = true }
+        barPlayButton.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(20)
+            make.centerY.equalToSuperview()
+            make.height.width.equalTo(25)
+        }
+        
+        barForwardButton.snp.makeConstraints { make in
+            make.right.equalToSuperview().offset(-20)
+            make.centerY.equalToSuperview()
+            make.height.equalTo(25)
+            make.width.equalTo(barForwardButton.snp.height).multipliedBy(1.3)
+        }
+        
+        labelSong.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.left.equalTo(barPlayButton.snp.right).offset(20)
+            make.right.equalTo(barForwardButton.snp.left).offset(-20)
+        }
     }
 }

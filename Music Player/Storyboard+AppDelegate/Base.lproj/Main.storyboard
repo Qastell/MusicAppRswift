@@ -44,7 +44,6 @@
                     </view>
                     <navigationItem key="navigationItem" prompt=" " id="L4F-CM-elg"/>
                     <connections>
-                        <outlet property="bottomConstaintTableView" destination="Zm2-Fv-oiL" id="FXJ-RC-K1j"/>
                         <outlet property="myTableView" destination="3rs-VM-vVM" id="KXi-fQ-EsX"/>
                     </connections>
                 </viewController>
