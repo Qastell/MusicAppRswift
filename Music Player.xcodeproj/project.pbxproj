@@ -48,7 +48,10 @@
 		3F6038622479446400E703E0 /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6038612479446400E703E0 /* SongService.swift */; };
 		3F6038642479479F00E703E0 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6038632479479F00E703E0 /* MainTableViewCell.swift */; };
 		3F641FB0255AE2CC00C85227 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 3F641FAF255AE2CC00C85227 /* Rswift */; };
-		3F641FB6255AE42500C85227 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F641FB5255AE42500C85227 /* R.generated.swift */; };
+		3F641FCD255AFB3200C85227 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F641FCF255AFB3200C85227 /* Localizable.strings */; };
+		3F641FF3255B9B1A00C85227 /* Gardens_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F641FF1255B9B1A00C85227 /* Gardens_Regular.ttf */; };
+		3F641FF4255B9B1A00C85227 /* Lemon_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F641FF2255B9B1A00C85227 /* Lemon_Regular.ttf */; };
+		3F641FF8255B9BBC00C85227 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F641FF7255B9BBC00C85227 /* R.generated.swift */; };
 		3F64DC2524C72570009768E3 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2424C72570009768E3 /* MainPresenter.swift */; };
 		3F64DC2824C7260D009768E3 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2724C7260D009768E3 /* BasePresenter.swift */; };
 		3F64DC2B24C7263C009768E3 /* RoutableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64DC2A24C7263C009768E3 /* RoutableViewController.swift */; };
@@ -154,7 +157,13 @@
 		3F60385B24792DE900E703E0 /* Roddy Ricch - The Box.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Roddy Ricch - The Box.mp3"; sourceTree = "<group>"; };
 		3F6038612479446400E703E0 /* SongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongService.swift; sourceTree = "<group>"; };
 		3F6038632479479F00E703E0 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
-		3F641FB5255AE42500C85227 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		3F641FC3255AFA8300C85227 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		3F641FC4255AFA8300C85227 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3F641FCE255AFB3200C85227 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3F641FD0255AFB3700C85227 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3F641FF1255B9B1A00C85227 /* Gardens_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gardens_Regular.ttf; path = ../../../../Downloads/Gardens_Regular.ttf; sourceTree = "<group>"; };
+		3F641FF2255B9B1A00C85227 /* Lemon_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Lemon_Regular.ttf; path = ../../../../Downloads/Lemon_Regular.ttf; sourceTree = "<group>"; };
+		3F641FF7255B9BBC00C85227 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		3F64DC2424C72570009768E3 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		3F64DC2724C7260D009768E3 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		3F64DC2A24C7263C009768E3 /* RoutableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +308,8 @@
 		3F60381924792D4900E703E0 /* Music Player */ = {
 			isa = PBXGroup;
 			children = (
+				3F641FF0255B9AFC00C85227 /* Fonts */,
+				3F641FF7255B9BBC00C85227 /* R.generated.swift */,
 				3FA077F024E042BF000E5E4A /* Storyboard+AppDelegate */,
 				3F4E3EF724D03E78002AAD23 /* TabBarModule */,
 				3F3E765E24A10B1200B076CB /* MainModule */,
@@ -312,7 +323,7 @@
 				3F36B66D247FC29A006258B2 /* LaunchScreen */,
 				3F60382A24792D4C00E703E0 /* Info.plist */,
 				3F4451F2247EB1AD00DDF99F /* Assets.xcassets */,
-				3F641FB5255AE42500C85227 /* R.generated.swift */,
+				3F641FCF255AFB3200C85227 /* Localizable.strings */,
 			);
 			path = "Music Player";
 			sourceTree = "<group>";
@@ -389,6 +400,15 @@
 				3F75BE3B2552ABA5000F86B7 /* Multidelegate.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		3F641FF0255B9AFC00C85227 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3F641FF1255B9B1A00C85227 /* Gardens_Regular.ttf */,
+				3F641FF2255B9B1A00C85227 /* Lemon_Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		3F64DC2024C72515009768E3 /* View */ = {
@@ -582,6 +602,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 3F60380E24792D4900E703E0;
 			packageReferences = (
@@ -607,6 +628,7 @@
 				3F2913A7248A315200977368 /* Travis Scott - SKELETONS ft The Weeknd.mp3 in Resources */,
 				3F2913AF248A317000977368 /* Travis Scott - BUTTERFLY EFFECT.mp3 in Resources */,
 				3FDAA72D2494EB0300BC791C /* Kendrick Lamar - DNA..mp3 in Resources */,
+				3F641FF3255B9B1A00C85227 /* Gardens_Regular.ttf in Resources */,
 				3F60385024792DB400E703E0 /* Travis Scott - The Scotts.mp3 in Resources */,
 				3F60385424792DC700E703E0 /* Don Toliver - No Idea.mp3 in Resources */,
 				3F29139F248A2AD600977368 /* Travis Scott - HIGHEST IN THE ROOM.mp3 in Resources */,
@@ -619,7 +641,9 @@
 				3F29139D248A2AC200977368 /* 21 Savage - Banc Account.mp3 in Resources */,
 				3F2913A5248A314500977368 /* Travis Scott - CAROUSEL ft Frank Ocean.mp3 in Resources */,
 				3FDAA7272494E11200BC791C /* Shawn Mendes - In My Blood.mp3 in Resources */,
+				3F641FCD255AFB3200C85227 /* Localizable.strings in Resources */,
 				3F2913AB248A316000977368 /* Travis Scott - Stargazing.mp3 in Resources */,
+				3F641FF4255B9B1A00C85227 /* Lemon_Regular.ttf in Resources */,
 				3FDAA72F2494EC3000BC791C /* Rae Sremmurd - Black Beatles Ft. Gucci Mane.mp3 in Resources */,
 				3F29139B248A2AA900977368 /* Oliver Tree - Hurt.mp3 in Resources */,
 				3FDAA72B2494E27700BC791C /* Ariana Grande - 7 Rings.mp3 in Resources */,
@@ -779,6 +803,7 @@
 				3F41A2D724DAC07600251A5D /* NotificationService.swift in Sources */,
 				3FD69C8424D19FCC002E5DA1 /* UIButton+Extension.swift in Sources */,
 				3F64DC2524C72570009768E3 /* MainPresenter.swift in Sources */,
+				3F641FF8255B9BBC00C85227 /* R.generated.swift in Sources */,
 				3F64DC2F24C72779009768E3 /* Router.swift in Sources */,
 				3FDF613924C7347300D23C1E /* AlbumDetailPresenter.swift in Sources */,
 				3FB776CF251F897C0061337F /* Bool+Extension.swift in Sources */,
@@ -786,7 +811,6 @@
 				3F60381B24792D4900E703E0 /* AppDelegate.swift in Sources */,
 				3F2913B1248A3E4A00977368 /* AlbumDetailViewController.swift in Sources */,
 				3F4E3EF424D036FA002AAD23 /* MainTabBarController.swift in Sources */,
-				3F641FB6255AE42500C85227 /* R.generated.swift in Sources */,
 				3FC9F500247ACBB40079B4EC /* AlbumViewCell.swift in Sources */,
 				3F27FBC72482272D000B0978 /* DetailPlayerViewController.swift in Sources */,
 				3F161C1A24DFEF51000291F2 /* SongCell.swift in Sources */,
@@ -830,6 +854,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3F60382324792D4900E703E0 /* Base */,
+				3F641FC3255AFA8300C85227 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -838,8 +863,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				3F60382824792D4C00E703E0 /* Base */,
+				3F641FC4255AFA8300C85227 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3F641FCF255AFB3200C85227 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F641FCE255AFB3200C85227 /* en */,
+				3F641FD0255AFB3700C85227 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -849,6 +884,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -909,6 +945,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

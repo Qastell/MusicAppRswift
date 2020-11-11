@@ -78,11 +78,11 @@ extension AlbumViewController {
         guard let navigationController = navigationController else {return}
         
         let titleView = UILabel()
-        titleView.text = "Your Albums"
+        titleView.text = R.string.localizable.yourAlbums()
         titleView.textColor = #colorLiteral(red: 0.9568627451, green: 0.3411764706, blue: 0.4196078431, alpha: 1)
         titleView.textAlignment = .center
-        titleView.font = UIFont.systemFont(ofSize: 30)
-        titleView.frame = CGRect(x: ((navigationController.navigationBar.bounds.width)/2)-100, y: 40, width: (navigationController.navigationBar.frame.width)/2, height: 20)
+        titleView.font = R.font.cm_GARDEN_R(size: 30)
+        titleView.frame = CGRect(x: ((navigationController.navigationBar.bounds.width)/2)-100, y: 40, width: (navigationController.navigationBar.frame.width)/2, height: 30)
         navigationController.navigationBar.insertSubview(titleView, at: 1)
     }
     

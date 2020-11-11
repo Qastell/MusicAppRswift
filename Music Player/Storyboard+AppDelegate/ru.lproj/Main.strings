@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "SICKO MODE"; ObjectID = "6g2-zt-IGB"; */
+"6g2-zt-IGB.text" = "SICKO MODE";
+
+/* Class = "UINavigationItem"; prompt = " "; ObjectID = "L4F-CM-elg"; */
+"L4F-CM-elg.prompt" = " ";
+
+/* Class = "UINavigationItem"; prompt = " "; ObjectID = "QxG-lZ-HL9"; */
+"QxG-lZ-HL9.prompt" = " ";
+
+/* Class = "UILabel"; text = "-2:30"; ObjectID = "Uh7-ho-vrG"; */
+"Uh7-ho-vrG.text" = "-2:30";
+
+/* Class = "UILabel"; text = "Travis Scott"; ObjectID = "YXF-DD-plS"; */
+"YXF-DD-plS.text" = "Travis Scott";
+
+/* Class = "UITabBarItem"; title = "tracks"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "tracks";
+
+/* Class = "UITabBarItem"; title = "albums"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "albums";
+
+/* Class = "UILabel"; text = "Travis Scott"; ObjectID = "fmP-OT-K1L"; */
+"fmP-OT-K1L.text" = "Travis Scott";
+
+/* Class = "UIButton"; normalTitle = "    Mix"; ObjectID = "gMm-lR-xAq"; */
+"gMm-lR-xAq.normalTitle" = "    Mix";
+
+/* Class = "UILabel"; text = "2:42"; ObjectID = "gST-jx-Fmx"; */
+"gST-jx-Fmx.text" = "2:42";
+
+/* Class = "UILabel"; text = "ASTROWORLD"; ObjectID = "ldL-jp-XbK"; */
+"ldL-jp-XbK.text" = "ASTROWORLD";
+
+/* Class = "UIButton"; normalTitle = "    Play"; ObjectID = "u29-8M-aV5"; */
+"u29-8M-aV5.normalTitle" = "    Play";
+
+/* Class = "UILabel"; text = "BACK"; ObjectID = "v4X-nw-VQ3"; */
+"v4X-nw-VQ3.text" = "BACK";

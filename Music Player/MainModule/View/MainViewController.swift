@@ -11,11 +11,6 @@ import AVFoundation
 
 class MainViewController: RoutableViewController<MainPresenting> {
     
-    private enum Buttons {
-        static let forward = "goForward"
-        static let randomize = "randomSong"
-        static let song = "currentSong"
-    }
     
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var bottomConstaintTableView: NSLayoutConstraint!
@@ -75,7 +70,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.songTableViewCell, for: indexPath) else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.mainTableViewCell, for: indexPath) else { return UITableViewCell() }
         
         cell.setup(styleImage: .image, song: presenter.userPlaylist[indexPath.row], presenter: presenter)
         cell.playlist = presenter.userPlaylist
@@ -123,11 +118,11 @@ extension MainViewController {
         guard let navigationController = navigationController else {return}
         
         let titleView = UILabel()
-        titleView.text = "Your Tracks"
+        titleView.text = R.string.localizable.yourTracks()
         titleView.textColor = #colorLiteral(red: 0.9568627451, green: 0.3411764706, blue: 0.4196078431, alpha: 1)
         titleView.textAlignment = .center
-        titleView.font = UIFont.systemFont(ofSize: 30)
-        titleView.frame = CGRect(x: (navigationController.navigationBar.bounds.width/2)-100, y: 40, width: (navigationController.navigationBar.frame.width)/2, height: 20)
+        titleView.font = R.font.cm_GARDEN_R(size: 30)
+        titleView.frame = CGRect(x: (navigationController.navigationBar.bounds.width/2)-100, y: 40, width: (navigationController.navigationBar.frame.width)/2, height: 30)
         navigationController.navigationBar.insertSubview(titleView, at: 1)
         
         let standart = CGRect(x: (navigationController.navigationBar.bounds.width/2)-125, y: titleView.frame.minY-3, width: navigationController.navigationBar.frame.height/3, height: navigationController.navigationBar.frame.height/3)

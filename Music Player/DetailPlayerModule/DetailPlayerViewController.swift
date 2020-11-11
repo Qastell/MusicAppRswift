@@ -27,17 +27,6 @@ class DetailPlayerViewController: RoutableViewController<DetailPlayerPresenting>
     @IBOutlet weak var currentProgress: UILabel!
     @IBOutlet weak var durationSong: UILabel!
     
-    static let identifier = "SongViewController"
-    
-    private enum Buttons {
-        static let play = "playButton"
-        static let pause = "pauseButton"
-        
-        static let volumeSliderIsntEnable = "soundnotEnable"
-        static let volumeSliderHalf = "soundEnableLittle"
-        static let volumeSliderFull = "soundEnable"
-    }
-    
     var timer = Timer()
     
     var valueVolumeSlider = Float() {
